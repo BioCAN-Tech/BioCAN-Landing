@@ -163,30 +163,20 @@ export default function ProblemVisualization() {
                   >
                     {/* Top Section - Statistics */}
                     <div className="bg-gradient-to-r from-slate-800/50 to-slate-900/50 p-8 border-b border-white/10">
-                      <div className="flex flex-col lg:flex-row items-start lg:items-center space-y-6 lg:space-y-0 lg:space-x-8">
-                        {/* Icon */}
-                        <div className={`w-24 h-24 rounded-2xl bg-gradient-to-r ${currentStat.color} p-6 relative flex-shrink-0`}>
-                          <currentStat.icon className="w-12 h-12 text-white" />
+                      <div className="flex flex-col lg:flex-row lg:items-end lg:space-x-6 space-y-4 lg:space-y-0">
+                        {/* Percentage */}
+                        <div className="text-7xl md:text-8xl font-bold gradient-primary leading-none">
+                          {currentStat.percentage}%
                         </div>
-
-                        {/* Content */}
+                        
+                        {/* Title & Description */}
                         <div className="flex-1">
-                          <div className="flex flex-col lg:flex-row lg:items-end lg:space-x-6 space-y-4 lg:space-y-0">
-                            {/* Percentage */}
-                            <div className="text-7xl md:text-8xl font-bold gradient-primary leading-none">
-                              {currentStat.percentage}%
-                            </div>
-                            
-                            {/* Title & Description */}
-                            <div className="flex-1">
-                              <h3 className="text-2xl md:text-3xl font-bold text-white leading-tight mb-3">
-                                {currentStat.title}
-                              </h3>
-                              <p className="text-gray-300 text-lg leading-relaxed">
-                                {currentStat.description}
-                              </p>
-                            </div>
-                          </div>
+                          <h3 className="text-2xl md:text-3xl font-bold text-white leading-tight mb-3">
+                            {currentStat.title}
+                          </h3>
+                          <p className="text-gray-300 text-lg leading-relaxed">
+                            {currentStat.description}
+                          </p>
                         </div>
                       </div>
                     </div>
@@ -239,7 +229,7 @@ export default function ProblemVisualization() {
               viewport={{ once: true }}
               className="lg:col-span-4"
             >
-              <div className="space-y-4">
+              <div className="h-full flex flex-col space-y-4">
                 {additionalStats.map((stat, index) => (
                   <motion.div
                     key={stat.label}
@@ -247,18 +237,18 @@ export default function ProblemVisualization() {
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.6, delay: index * 0.1 }}
                     viewport={{ once: true }}
-                    className="glass-card p-4 rounded-2xl group hover:scale-105 transition-all duration-300 border border-white/5 hover:border-red-400/30"
+                    className="glass-card p-5 rounded-2xl group hover:scale-105 transition-all duration-300 border border-white/5 hover:border-red-400/30 flex-1 flex items-center"
                   >
-                    <div className="flex items-center space-x-4">
+                    <div className="flex items-center space-x-4 w-full">
                       <div className="bg-gradient-to-r from-red-500/20 to-orange-500/20 w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0">
                         <stat.icon className="w-6 h-6 text-red-400" />
                       </div>
                       <div className="flex-1">
-                        <div className="text-2xl font-bold text-white leading-none mb-1">
+                        <div className="text-2xl font-bold text-white leading-none mb-1.5">
                           {stat.value}
                           <span className="text-sm text-red-400 ml-1">{stat.unit}</span>
                         </div>
-                        <div className="text-xs text-gray-400 leading-tight">{stat.label}</div>
+                        <div className="text-xs text-gray-400 leading-relaxed">{stat.label}</div>
                       </div>
                     </div>
                   </motion.div>
