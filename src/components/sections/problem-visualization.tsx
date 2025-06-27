@@ -186,48 +186,23 @@ export default function ProblemVisualization() {
 
                   {/* Animated Percentage */}
                   <motion.div
-                    className="relative mb-4"
-                    initial={{ scale: 0 }}
-                    animate={{ scale: 1 }}
-                    transition={{ type: "spring", stiffness: 200, delay: 0.2 }}
+                    className="mb-6"
+                    initial={{ opacity: 0, y: 50 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
                   >
-                    <span className="text-6xl md:text-8xl font-bold gradient-primary">
+                    <motion.span 
+                      className="text-7xl md:text-9xl font-bold gradient-primary block"
+                      initial={{ scale: 0.5, opacity: 0 }}
+                      animate={{ scale: 1, opacity: 1 }}
+                      transition={{ 
+                        duration: 0.8, 
+                        ease: "easeOut",
+                        delay: 0.5
+                      }}
+                    >
                       {currentStat.percentage}%
-                    </span>
-                    
-                    {/* Circular Progress Ring */}
-                    <svg className="absolute inset-0 w-full h-full" viewBox="0 0 100 100">
-                      <circle
-                        cx="50"
-                        cy="50"
-                        r="45"
-                        fill="none"
-                        stroke="rgba(255,255,255,0.1)"
-                        strokeWidth="2"
-                      />
-                      <motion.circle
-                        cx="50"
-                        cy="50"
-                        r="45"
-                        fill="none"
-                        stroke="url(#gradient)"
-                        strokeWidth="2"
-                        strokeLinecap="round"
-                        initial={{ pathLength: 0 }}
-                        animate={{ pathLength: currentStat.percentage / 100 }}
-                        transition={{ duration: 1.5, ease: "easeInOut" }}
-                        style={{
-                          rotate: -90,
-                          transformOrigin: "50% 50%"
-                        }}
-                      />
-                      <defs>
-                        <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="0%">
-                          <stop offset="0%" stopColor="#3b82f6" />
-                          <stop offset="100%" stopColor="#8b5cf6" />
-                        </linearGradient>
-                      </defs>
-                    </svg>
+                    </motion.span>
                   </motion.div>
 
                   <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
@@ -325,41 +300,7 @@ export default function ProblemVisualization() {
           </motion.div>
         </div>
 
-        {/* Call to Action */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          viewport={{ once: true }}
-          className="text-center"
-        >
-          <div className="glass-card p-8 rounded-3xl max-w-4xl mx-auto relative overflow-hidden">
-            <div className="relative">
-              <h3 className="text-3xl font-bold text-white mb-4">
-                But What If There Was a Better Way?
-              </h3>
-              <p className="text-xl text-gray-300 mb-8">
-                BioCAN's AI-powered platform addresses each of these problems directly, 
-                creating clear pathways to career success in life sciences.
-              </p>
-              
-              <motion.button
-                className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-xl group"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-                onClick={() => {
-                  const solutionSection = document.getElementById('solution')
-                  if (solutionSection) {
-                    solutionSection.scrollIntoView({ behavior: 'smooth' })
-                  }
-                }}
-              >
-                Discover Our Solution
-                <ArrowRight className="w-5 h-5 ml-2 inline group-hover:translate-x-1 transition-transform" />
-              </motion.button>
-            </div>
-          </div>
-        </motion.div>
+
       </div>
     </section>
   )

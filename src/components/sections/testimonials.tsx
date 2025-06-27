@@ -104,12 +104,11 @@ export default function EarlyInterest() {
             <span className="text-blue-400 font-medium">Early Community Response</span>
           </div>
           <h2 className="text-4xl md:text-5xl font-bold text-white mb-6">
-            Life Science Professionals Are
-            <span className="block gradient-primary">Ready for Change</span>
+            Experience AI-Powered
+            <span className="block gradient-primary">Career Intelligence</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Even before our launch, the response from the life science community has been overwhelming. 
-            Here's what early interested users are saying.
+            Be among the first to access our revolutionary platform. Join the waitlist for exclusive early access and beta testing opportunities.
           </p>
         </motion.div>
 
@@ -277,19 +276,19 @@ export default function EarlyInterest() {
               </p>
               
               <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <div className="flex-1 max-w-md">
-                  <input
-                    type="email"
-                    placeholder="Enter your email for updates"
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
-                  />
-                </div>
                 <motion.button
-                  className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-xl font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-xl whitespace-nowrap"
+                  className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-xl"
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
                   Join Beta Waitlist
+                </motion.button>
+                <motion.button
+                  className="glass-card text-white px-8 py-4 rounded-xl font-medium hover:bg-white/10 transition-all duration-200"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
+                >
+                  Try Career Assessment
                 </motion.button>
               </div>
               

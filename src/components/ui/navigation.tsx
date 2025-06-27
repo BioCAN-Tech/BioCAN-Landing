@@ -22,13 +22,7 @@ export default function Navigation({ className }: NavigationProps) {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const navItems = [
-    { label: 'About', href: 'about' },
-    { label: 'Features', href: 'features' },
-    { label: 'How It Works', href: 'how-it-works' },
-    { label: 'Success Stories', href: 'testimonials' },
-    { label: 'Contact', href: 'contact' },
-  ]
+  const navItems: any[] = []
 
   const handleNavClick = (href: string) => {
     scrollToSection(href)
@@ -104,25 +98,25 @@ export default function Navigation({ className }: NavigationProps) {
                 >
                   {item.label}
                 </button>
-              ))}
-              <div className="pt-4 border-t border-white/10 space-y-3">
-                <Button
-                  variant="ghost"
-                  className="w-full"
-                  onClick={() => handleNavClick('contact')}
-                >
-                  Sign In
-                </Button>
-                <Button
-                  variant="primary"
-                  className="w-full"
-                  onClick={() => handleNavClick('contact')}
-                >
-                  Get Started
-                  <ChevronRight className="w-4 h-4 ml-2" />
-                </Button>
+                              ))}
+                <div className="pt-4 border-t border-white/10 space-y-3">
+                  <Button
+                    variant="ghost"
+                    className="w-full"
+                    onClick={() => handleNavClick('contact')}
+                  >
+                    Sign In
+                  </Button>
+                  <Button
+                    variant="primary"
+                    className="w-full"
+                    onClick={() => handleNavClick('contact')}
+                  >
+                    Get Started
+                    <ChevronRight className="w-4 h-4 ml-2" />
+                  </Button>
+                </div>
               </div>
-            </div>
           </div>
         )}
       </div>

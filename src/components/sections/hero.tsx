@@ -163,111 +163,11 @@ export default function Hero() {
             </h1>
           </motion.div>
 
-          {/* Problem Statement */}
-          <motion.div variants={itemVariants} className="mb-12">
-            <p className="text-xl md:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed mb-8">
-              Life science students and graduates face critical career navigation challenges. 
-              <span className="gradient-primary font-semibold"> BioCAN's AI-powered platform</span> solves 
-              the career misalignment crisis affecting thousands of talented professionals.
-            </p>
-          </motion.div>
 
-          {/* Interactive Pain Points */}
-          <motion.div variants={itemVariants} className="mb-16">
-            <div className="max-w-5xl mx-auto">
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={currentPainPoint}
-                  initial={{ opacity: 0, y: 30, scale: 0.9 }}
-                  animate={{ opacity: 1, y: 0, scale: 1 }}
-                  exit={{ opacity: 0, y: -30, scale: 0.9 }}
-                  transition={{ duration: 0.5 }}
-                  className="glass-card p-8 md:p-12 rounded-3xl relative group cursor-pointer"
-                  onMouseEnter={() => setCurrentPainPoint(currentPainPoint)}
-                >
-                  <div className="flex items-center justify-center mb-6">
-                    <motion.div
-                      className="w-20 h-20 rounded-2xl bg-gradient-to-r from-red-500 to-orange-500 flex items-center justify-center"
-                      whileHover={{ scale: 1.1, rotate: 5 }}
-                      transition={{ type: "spring", stiffness: 300 }}
-                    >
-                      {React.createElement(painPoints[currentPainPoint].icon, { className: "w-10 h-10 text-white" })}
-                    </motion.div>
-                  </div>
-                  
-                  <motion.div
-                    className="text-4xl md:text-6xl font-bold gradient-primary mb-4"
-                    key={`stat-${currentPainPoint}`}
-                    initial={{ scale: 0 }}
-                    animate={{ scale: 1 }}
-                    transition={{ type: "spring", stiffness: 200, delay: 0.2 }}
-                  >
-                    {painPoints[currentPainPoint].stat}
-                  </motion.div>
-                  
-                  <p className="text-xl md:text-2xl text-white">
-                    of life science graduates {painPoints[currentPainPoint].text}
-                  </p>
 
-                  {/* Progress indicators */}
-                  <div className="flex justify-center mt-6 space-x-2">
-                    {painPoints.map((_, index) => (
-                      <motion.div
-                        key={index}
-                        className={`w-3 h-3 rounded-full cursor-pointer ${
-                          index === currentPainPoint ? 'bg-blue-400' : 'bg-white/30'
-                        }`}
-                        whileHover={{ scale: 1.2 }}
-                        onClick={() => setCurrentPainPoint(index)}
-                      />
-                    ))}
-                  </div>
-                </motion.div>
-              </AnimatePresence>
-            </div>
-          </motion.div>
 
-          {/* Interactive CTA Buttons */}
-          <motion.div
-            variants={itemVariants}
-            className="flex flex-col sm:flex-row items-center justify-center gap-6 mb-16"
-          >
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Button
-                variant="primary"
-                size="lg"
-                onClick={() => scrollToSection('solution')}
-                className="group relative overflow-hidden"
-              >
-                <motion.div
-                  className="absolute inset-0 bg-gradient-to-r from-white/20 to-transparent"
-                  initial={{ x: '-100%' }}
-                  whileHover={{ x: '100%' }}
-                  transition={{ duration: 0.6 }}
-                />
-                <span className="relative">See How We Solve This</span>
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform relative" />
-              </Button>
-            </motion.div>
-            
-            <motion.div
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              <Button
-                variant="glass"
-                size="lg"
-                onClick={() => scrollToSection('demo')}
-                className="group"
-              >
-                <Play className="w-5 h-5 mr-2 group-hover:scale-110 transition-transform" />
-                Watch Preview
-              </Button>
-            </motion.div>
-          </motion.div>
+
+
 
           {/* Early Access CTA */}
           <motion.div
