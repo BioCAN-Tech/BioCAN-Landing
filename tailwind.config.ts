@@ -40,6 +40,7 @@ const config = {
       backgroundImage: {
         'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
         'gradient-conic': 'conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))',
+        'logo-gradient': 'linear-gradient(to right, #3b82f6, #8b5cf6, #14b8a6)',
         'glass-gradient': 'linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%)',
       },
       backdropBlur: {
@@ -82,6 +83,9 @@ const config = {
       fontFamily: {
         sans: ['var(--font-inter)', 'system-ui', 'sans-serif'],
         mono: ['var(--font-mono)', 'Menlo', 'Monaco', 'monospace'],
+      },
+      borderRadius: {
+        lg: "var(--radius)",
       },
     },
   },
