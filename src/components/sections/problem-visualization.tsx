@@ -41,7 +41,7 @@ export default function ProblemVisualization() {
     {
       percentage: 58,
       title: 'Feel Underprepared',
-      description: 'Graduates lack the industry-specific skills needed for modern biotech roles',
+      description: 'Lack industry-specific skills for modern biotech careers',
       icon: AlertTriangle,
       color: 'from-yellow-500 to-red-500',
       detail: 'Academic training often doesn\'t align with industry needs, leaving graduates feeling unprepared for real-world challenges.',
@@ -101,8 +101,8 @@ export default function ProblemVisualization() {
             key={i}
             className="absolute w-2 h-2 bg-red-400/20 rounded-full"
             style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
+              left: `${(i * 6.7) % 100}%`,
+              top: `${(i * 8.3) % 100}%`,
             }}
             animate={{
               y: [0, -30, 0],
@@ -110,9 +110,9 @@ export default function ProblemVisualization() {
               scale: [0.5, 1, 0.5],
             }}
             transition={{
-              duration: 4 + Math.random() * 2,
+              duration: 4 + (i % 3),
               repeat: Infinity,
-              delay: Math.random() * 3,
+              delay: i * 0.2,
             }}
           />
         ))}
@@ -151,7 +151,7 @@ export default function ProblemVisualization() {
             viewport={{ once: true }}
             className="relative"
           >
-            <div className="glass-card p-8 rounded-3xl relative overflow-hidden">
+            <div className="glass-card p-6 rounded-2xl relative overflow-hidden max-w-md mx-auto">
               <AnimatePresence mode="wait">
                 <motion.div
                   key={activeStatIndex}
@@ -163,15 +163,15 @@ export default function ProblemVisualization() {
                 >
                   {/* Animated Icon */}
                   <motion.div
-                    className={`w-24 h-24 rounded-3xl bg-gradient-to-r ${currentStat.color} p-6 mx-auto mb-6 relative`}
+                    className={`w-20 h-20 rounded-2xl bg-gradient-to-r ${currentStat.color} p-5 mx-auto mb-5 relative`}
                     whileHover={{ scale: 1.1, rotate: [0, 5, -5, 0] }}
                     transition={{ duration: 0.5 }}
                   >
-                    <currentStat.icon className="w-12 h-12 text-white" />
+                    <currentStat.icon className="w-10 h-10 text-white" />
                     
                     {/* Pulse Ring */}
                     <motion.div
-                      className={`absolute inset-0 rounded-3xl bg-gradient-to-r ${currentStat.color} opacity-30`}
+                      className={`absolute inset-0 rounded-2xl bg-gradient-to-r ${currentStat.color} opacity-30`}
                       animate={{
                         scale: [1, 1.5, 1],
                         opacity: [0.3, 0, 0.3]
@@ -186,13 +186,13 @@ export default function ProblemVisualization() {
 
                   {/* Animated Percentage */}
                   <motion.div
-                    className="mb-6"
+                    className="mb-5"
                     initial={{ opacity: 0, y: 50 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
                   >
                     <motion.span 
-                      className="text-7xl md:text-9xl font-bold gradient-primary block"
+                      className="text-6xl md:text-7xl font-bold gradient-primary block"
                       initial={{ scale: 0.5, opacity: 0 }}
                       animate={{ scale: 1, opacity: 1 }}
                       transition={{ 
@@ -205,48 +205,33 @@ export default function ProblemVisualization() {
                     </motion.span>
                   </motion.div>
 
-                  <h3 className="text-2xl md:text-3xl font-bold text-white mb-4">
+                  <h3 className="text-xl md:text-2xl font-bold text-white mb-3">
                     {currentStat.title}
                   </h3>
-                  <p className="text-gray-300 text-lg leading-relaxed">
+                  <p className="text-gray-300 text-base leading-relaxed">
                     {currentStat.description}
                   </p>
                 </motion.div>
               </AnimatePresence>
 
-              {/* Navigation Controls */}
-              <div className="flex items-center justify-center mt-8 space-x-4">
-                <motion.button
-                  onClick={prevStat}
-                  className="glass-card p-3 rounded-lg text-white hover:bg-white/10 transition-colors"
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
-                >
-                  <ChevronLeft className="w-5 h-5" />
-                </motion.button>
-                
-                <div className="flex space-x-2">
-                  {problemStats.map((_, index) => (
-                    <motion.button
-                      key={index}
-                      onClick={() => setActiveStatIndex(index)}
-                      className={`w-3 h-3 rounded-full transition-all duration-300 ${
-                        index === activeStatIndex ? 'bg-red-400' : 'bg-white/30'
-                      }`}
-                      whileHover={{ scale: 1.2 }}
-                    />
-                  ))}
-                </div>
+              {/* Navigation Arrows */}
+              <motion.button
+                onClick={prevStat}
+                className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white p-2 rounded-full transition-all duration-200 opacity-70 hover:opacity-100"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+              >
+                <ChevronLeft className="w-5 h-5" />
+              </motion.button>
 
-                <motion.button
-                  onClick={nextStat}
-                  className="glass-card p-3 rounded-lg text-white hover:bg-white/10 transition-colors"
-                  whileHover={{ scale: 1.1 }}
-                  whileTap={{ scale: 0.9 }}
-                >
-                  <ChevronRight className="w-5 h-5" />
-                </motion.button>
-              </div>
+              <motion.button
+                onClick={nextStat}
+                className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-white/10 hover:bg-white/20 backdrop-blur-sm text-white p-2 rounded-full transition-all duration-200 opacity-70 hover:opacity-100"
+                whileHover={{ scale: 1.1 }}
+                whileTap={{ scale: 0.9 }}
+              >
+                <ChevronRight className="w-5 h-5" />
+              </motion.button>
             </div>
           </motion.div>
 

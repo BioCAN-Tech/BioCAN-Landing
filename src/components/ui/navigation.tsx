@@ -40,12 +40,13 @@ export default function Navigation({ className }: NavigationProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <div className="flex items-center space-x-2">
-            <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
-              <span className="text-white font-bold text-lg">B</span>
-            </div>
-            <span className="text-xl font-bold gradient-primary">BioCAN</span>
-          </div>
+                  <div className="flex items-center">
+          <img 
+            src="/Images/BioCAN_Logo.png" 
+            alt="BioCAN Logo" 
+            className="w-20 h-20 rounded-lg object-contain"
+          />
+        </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">

@@ -294,59 +294,7 @@ export default function Features() {
           </div>
         </motion.div>
 
-        {/* Interactive Demo CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.5 }}
-          viewport={{ once: true }}
-          className="text-center"
-        >
-          <div className="glass-card p-8 rounded-3xl max-w-3xl mx-auto relative overflow-hidden group">
-            <motion.div
-              className="absolute inset-0 bg-gradient-to-r from-blue-500/10 to-purple-500/10"
-              animate={{
-                x: ['-100%', '100%'],
-              }}
-              transition={{
-                duration: 3,
-                repeat: Infinity,
-                ease: "linear"
-              }}
-            />
-            
-            <div className="relative">
-              <Lightbulb className="w-12 h-12 text-blue-400 mx-auto mb-4 animate-pulse" />
-              <h3 className="text-3xl font-bold text-white mb-4">
-                Experience AI-Powered Career Intelligence
-              </h3>
-              <p className="text-gray-300 mb-6 text-lg">
-                Be among the first to access our revolutionary platform. Join the waitlist for 
-                exclusive early access and beta testing opportunities.
-              </p>
-              
-              <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                <motion.button
-                  className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-xl group flex items-center"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  Join Beta Waitlist
-                  <ChevronRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                </motion.button>
-                
-                <motion.button
-                  className="glass-card text-white px-8 py-4 rounded-xl font-medium hover:bg-white/10 transition-all duration-200 group flex items-center"
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                >
-                  <Brain className="w-5 h-5 mr-2" />
-                  Try Career Assessment
-                </motion.button>
-              </div>
-            </div>
-          </div>
-        </motion.div>
+
       </div>
     </section>
   )

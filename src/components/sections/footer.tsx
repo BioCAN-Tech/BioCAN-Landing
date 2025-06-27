@@ -11,33 +11,6 @@ export default function Footer() {
 
   const footerSections = [
     {
-      title: 'Product',
-      links: [
-        { label: 'Features', href: 'features' },
-        { label: 'How It Works', href: 'how-it-works' },
-        { label: 'Pricing', href: '#' },
-        { label: 'Success Stories', href: 'testimonials' },
-      ]
-    },
-    {
-      title: 'Company',
-      links: [
-        { label: 'About Us', href: '#' },
-        { label: 'Careers', href: '#' },
-        { label: 'Press', href: '#' },
-        { label: 'Blog', href: '#' },
-      ]
-    },
-    {
-      title: 'Resources',
-      links: [
-        { label: 'Help Center', href: '#' },
-        { label: 'Community', href: '#' },
-        { label: 'Webinars', href: '#' },
-        { label: 'API Docs', href: '#' },
-      ]
-    },
-    {
       title: 'Legal',
       links: [
         { label: 'Privacy Policy', href: '#' },
@@ -49,68 +22,41 @@ export default function Footer() {
   ]
 
   return (
-    <footer className="bg-black/50 border-t border-white/10 relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-8">
-          <div className="lg:col-span-2">
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-            >
-              <div className="flex items-center space-x-2 mb-6">
-                <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
-                  <span className="text-white font-bold text-lg">B</span>
-                </div>
-                <span className="text-xl font-bold gradient-primary">BioCAN</span>
+          <footer className="bg-black/30 border-t border-white/5 relative">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center">
+            {/* Contact Information - Compact Layout */}
+            <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6 mb-6">
+              <div className="flex items-center text-gray-500 text-sm">
+                <Mail className="w-4 h-4 mr-2" />
+                <span>arjun@biocan.ai</span>
               </div>
-              
-              <p className="text-gray-300 mb-6 max-w-sm">
-                Empowering biotechnology professionals to accelerate their careers through 
-                intelligent networking and career advancement tools.
-              </p>
-              
-              <div className="space-y-3">
-                <div className="flex items-center text-gray-400">
-                  <Mail className="w-4 h-4 mr-2" />
-                  <span className="text-sm">hello@biocan.io</span>
-                </div>
-                <div className="flex items-center text-gray-400">
-                  <Phone className="w-4 h-4 mr-2" />
-                  <span className="text-sm">+1 (555) 123-4567</span>
-                </div>
-                <div className="flex items-center text-gray-400">
-                  <MapPin className="w-4 h-4 mr-2" />
-                  <span className="text-sm">San Francisco, CA</span>
-                </div>
+              <div className="flex items-center text-gray-500 text-sm">
+                <Phone className="w-4 h-4 mr-2" />
+                <span>+91 9044404142</span>
               </div>
-            </motion.div>
-          </div>
+              <div className="flex items-center text-gray-500 text-sm">
+                <MapPin className="w-4 h-4 mr-2" />
+                <span>#17 Siddappa Square, K R Mohalla, Mysuru</span>
+              </div>
+            </div>
 
-          {footerSections.map((section, index) => (
-            <motion.div
-              key={section.title}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              viewport={{ once: true }}
-            >
-              <h3 className="text-white font-semibold mb-4">{section.title}</h3>
-              <ul className="space-y-3">
-                {section.links.map((link) => (
-                  <li key={link.label}>
-                    <button
-                      onClick={() => link.href.startsWith('#') ? null : scrollToSection(link.href)}
-                      className="text-gray-400 hover:text-white transition-colors text-sm"
-                    >
-                      {link.label}
-                    </button>
-                  </li>
+            {/* Legal Links - Compact */}
+            <div className="border-t border-white/5 pt-4">
+              <div className="flex flex-wrap items-center justify-center gap-4">
+                {footerSections[0].links.map((link, index) => (
+                  <button
+                    key={link.label}
+                    onClick={() => link.href.startsWith('#') ? null : scrollToSection(link.href)}
+                    className="text-gray-500 hover:text-gray-400 transition-colors text-xs"
+                  >
+                    {link.label}
+                  </button>
                 ))}
-              </ul>
-            </motion.div>
-          ))}
+              </div>
+            </div>
+          </div>
         </div>
 
         <motion.div
