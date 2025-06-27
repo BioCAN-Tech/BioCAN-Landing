@@ -44,7 +44,7 @@ export default function Navigation({ className }: NavigationProps) {
           <img 
             src="/Images/BioCAN_Logo.png" 
             alt="BioCAN Logo" 
-            className="w-20 h-20 rounded-lg object-contain"
+            className="w-24 h-24 rounded-lg object-contain"
           />
         </div>
 
