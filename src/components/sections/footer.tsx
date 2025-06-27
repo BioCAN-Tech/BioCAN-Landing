@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion'
 import { Mail, Phone, MapPin, ArrowUp } from 'lucide-react'
 import { scrollToSection } from '@/lib/utils'
+import Link from 'next/link'
 
 export default function Footer() {
   const scrollToTop = () => {
@@ -13,10 +14,11 @@ export default function Footer() {
     {
       title: 'Legal',
       links: [
-        { label: 'Privacy Policy', href: '#' },
-        { label: 'Terms of Service', href: '#' },
-        { label: 'Cookie Policy', href: '#' },
-        { label: 'GDPR', href: '#' },
+        { label: 'Privacy Policy', href: '/privacy-policy' },
+        { label: 'Terms & Conditions', href: '/terms' },
+        { label: 'Cancellation & Refund', href: '/cancellation-refund' },
+        { label: 'Service Delivery', href: '/shipping-delivery' },
+        { label: 'Contact Us', href: '/contact' },
       ]
     }
   ]
@@ -46,13 +48,13 @@ export default function Footer() {
             <div className="border-t border-white/5 pt-4">
               <div className="flex flex-wrap items-center justify-center gap-4">
                 {footerSections[0].links.map((link, index) => (
-                  <button
+                  <Link
                     key={link.label}
-                    onClick={() => link.href.startsWith('#') ? null : scrollToSection(link.href)}
+                    href={link.href}
                     className="text-gray-500 hover:text-gray-400 transition-colors text-xs"
                   >
                     {link.label}
-                  </button>
+                  </Link>
                 ))}
               </div>
             </div>
