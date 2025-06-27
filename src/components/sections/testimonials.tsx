@@ -1,10 +1,31 @@
 'use client'
 
-import React from 'react'
-import { motion } from 'framer-motion'
-import { Star, Users, Clock, TrendingUp, Brain } from 'lucide-react'
+import React, { useState } from 'react'
+import { motion, AnimatePresence } from 'framer-motion'
+import { Star, Users, Clock, TrendingUp, Brain, Check } from 'lucide-react'
 
 export default function EarlyInterest() {
+  const [email, setEmail] = useState('')
+  const [isSubmitted, setIsSubmitted] = useState(false)
+  const [showEmailForm, setShowEmailForm] = useState(false)
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    if (email.trim()) {
+      setIsSubmitted(true)
+      setEmail('')
+      // Reset after 3 seconds
+      setTimeout(() => {
+        setIsSubmitted(false)
+        setShowEmailForm(false)
+      }, 3000)
+    }
+  }
+
+  const handleJoinWaitlist = () => {
+    setShowEmailForm(true)
+  }
+
   const interestStats = [
     { value: '500+', label: 'Beta Waitlist Signups', icon: Users },
     { value: '15', label: 'Universities Interested', icon: Star },
@@ -114,23 +135,117 @@ export default function EarlyInterest() {
                   early access opportunities, and connect with like-minded professionals.
                 </p>
                 
-                <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-                  <motion.button
-                    className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-xl"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    Join Beta Waitlist
-                  </motion.button>
-                  <motion.button
-                    className="glass-card text-white px-8 py-4 rounded-xl font-medium hover:bg-white/10 transition-all duration-200 flex items-center gap-2"
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                  >
-                    <Brain className="w-5 h-5" />
-                    Try Career Assessment
-                  </motion.button>
-                </div>
+                <AnimatePresence mode="wait">
+                  {!showEmailForm ? (
+                    <motion.div
+                      key="buttons"
+                      initial={{ opacity: 1 }}
+                      exit={{ opacity: 0, y: -20 }}
+                      transition={{ duration: 0.3 }}
+                      className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6"
+                    >
+                      <motion.button
+                        className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-xl"
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        onClick={handleJoinWaitlist}
+                      >
+                        Join Beta Waitlist
+                      </motion.button>
+                      <motion.button
+                        className="glass-card text-white px-8 py-4 rounded-xl font-medium hover:bg-white/10 transition-all duration-200 flex items-center gap-2"
+                        whileHover={{ scale: 1.05 }}
+                        whileTap={{ scale: 0.95 }}
+                        onClick={() => window.location.href = 'https://app.biocan.ai'}
+                      >
+                        <Brain className="w-5 h-5" />
+                        Try Career Assessment
+                      </motion.button>
+                    </motion.div>
+                  ) : (
+                    <motion.div
+                      key="email-form"
+                      initial={{ opacity: 0, y: 20 }}
+                      animate={{ opacity: 1, y: 0 }}
+                      exit={{ opacity: 0, y: -20 }}
+                      transition={{ duration: 0.3 }}
+                      className="mb-6"
+                    >
+                      <form onSubmit={handleSubmit}>
+                        <div className="flex flex-col sm:flex-row gap-3 max-w-2xl mx-auto">
+                          <input
+                            type="email"
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)}
+                            placeholder="Enter your email to join beta waitlist"
+                            className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                            required
+                            autoFocus
+                          />
+                          <motion.div
+                            className="relative overflow-hidden"
+                            layout
+                          >
+                            <AnimatePresence mode="wait">
+                              {!isSubmitted ? (
+                                <motion.div
+                                  key="submit"
+                                  initial={{ opacity: 1 }}
+                                  exit={{ opacity: 0, scale: 0.8 }}
+                                  transition={{ duration: 0.2 }}
+                                >
+                                  <motion.button
+                                    type="submit"
+                                    className="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-3 rounded-xl font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-xl whitespace-nowrap"
+                                    whileHover={{ scale: 1.05 }}
+                                    whileTap={{ scale: 0.95 }}
+                                  >
+                                    Join Beta Waitlist
+                                  </motion.button>
+                                </motion.div>
+                              ) : (
+                                <motion.div
+                                  key="success"
+                                  initial={{ opacity: 0, scale: 0.8 }}
+                                  animate={{ opacity: 1, scale: 1 }}
+                                  exit={{ opacity: 0, scale: 0.8 }}
+                                  transition={{ duration: 0.3 }}
+                                  className="flex items-center justify-center bg-green-600 text-white px-8 py-3 rounded-xl font-medium min-w-[180px]"
+                                >
+                                  <motion.div
+                                    initial={{ scale: 0 }}
+                                    animate={{ scale: 1 }}
+                                    transition={{ delay: 0.1, type: "spring", stiffness: 200 }}
+                                    className="mr-2"
+                                  >
+                                    <Check className="w-5 h-5" />
+                                  </motion.div>
+                                  <motion.span
+                                    initial={{ opacity: 0, x: 10 }}
+                                    animate={{ opacity: 1, x: 0 }}
+                                    transition={{ delay: 0.2 }}
+                                  >
+                                    Added to Waitlist!
+                                  </motion.span>
+                                </motion.div>
+                              )}
+                            </AnimatePresence>
+                          </motion.div>
+                        </div>
+                      </form>
+                      
+                      {/* Back Button */}
+                      <div className="flex justify-center mt-4">
+                        <button
+                          onClick={() => setShowEmailForm(false)}
+                          className="text-gray-400 hover:text-white transition-colors text-sm"
+                        >
+                          ← Back to options
+                        </button>
+                      </div>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
                 
                 <p className="text-sm text-gray-400 mt-4">
                   💌 No spam, just exclusive updates • 🚀 Early access priority • 🎯 Beta testing opportunities

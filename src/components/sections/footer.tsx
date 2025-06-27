@@ -73,7 +73,7 @@ export default function Footer() {
           </div>
           
           <div className="flex items-center space-x-6">
-            <span className="text-gray-400 text-sm">Made with ❤️ for biotech professionals</span>
+            <span className="text-gray-400 text-sm">Made with ❤️ for Lifescience professionals</span>
             <button
               onClick={scrollToTop}
               className="glass-card p-2 rounded-lg text-gray-400 hover:text-white hover:scale-110 transition-all"

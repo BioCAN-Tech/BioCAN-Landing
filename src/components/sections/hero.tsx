@@ -1,7 +1,7 @@
 'use client'
 
 import React, { useState, useEffect } from 'react'
-import { ArrowRight, Play, Brain, Target, TrendingUp, Sparkles, ChevronDown } from 'lucide-react'
+import { ArrowRight, Play, Brain, Target, TrendingUp, Sparkles, ChevronDown, Check } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion'
 import Button from '../ui/button'
 import { scrollToSection } from '@/lib/utils'
@@ -9,6 +9,8 @@ import { scrollToSection } from '@/lib/utils'
 export default function Hero() {
   const [currentPainPoint, setCurrentPainPoint] = useState(0)
   const [isVisible, setIsVisible] = useState(false)
+  const [email, setEmail] = useState('')
+  const [isSubmitted, setIsSubmitted] = useState(false)
 
   const painPoints = [
     { stat: '70%', text: 'are underemployed or in misaligned roles', icon: Target },
@@ -30,6 +32,18 @@ export default function Hero() {
     }, 3000)
     return () => clearInterval(interval)
   }, [])
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault()
+    if (email.trim()) {
+      setIsSubmitted(true)
+      setEmail('')
+      // Reset after 3 seconds
+      setTimeout(() => {
+        setIsSubmitted(false)
+      }, 3000)
+    }
+  }
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -177,16 +191,64 @@ export default function Hero() {
             <p className="text-gray-300 mb-4">
               Be among the first to experience AI-powered career intelligence
             </p>
-            <div className="flex flex-col sm:flex-row gap-3">
+            <form onSubmit={handleSubmit} className="flex flex-col sm:flex-row gap-3">
               <input
                 type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
                 placeholder="Enter your email for early access"
                 className="flex-1 px-4 py-3 bg-white/10 border border-white/20 rounded-xl text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                required
               />
-              <Button variant="primary" className="whitespace-nowrap">
-                Get Early Access
-              </Button>
-            </div>
+              <motion.div
+                className="relative overflow-hidden"
+                layout
+              >
+                <AnimatePresence mode="wait">
+                  {!isSubmitted ? (
+                    <motion.div
+                      key="submit"
+                      initial={{ opacity: 1 }}
+                      exit={{ opacity: 0, scale: 0.8 }}
+                      transition={{ duration: 0.2 }}
+                    >
+                      <Button 
+                        type="submit" 
+                        variant="primary" 
+                        className="whitespace-nowrap"
+                      >
+                        Get Early Access
+                      </Button>
+                    </motion.div>
+                  ) : (
+                    <motion.div
+                      key="success"
+                      initial={{ opacity: 0, scale: 0.8 }}
+                      animate={{ opacity: 1, scale: 1 }}
+                      exit={{ opacity: 0, scale: 0.8 }}
+                      transition={{ duration: 0.3 }}
+                      className="flex items-center justify-center bg-green-600 text-white px-6 py-3 rounded-xl font-medium min-w-[140px]"
+                    >
+                      <motion.div
+                        initial={{ scale: 0 }}
+                        animate={{ scale: 1 }}
+                        transition={{ delay: 0.1, type: "spring", stiffness: 200 }}
+                        className="mr-2"
+                      >
+                        <Check className="w-5 h-5" />
+                      </motion.div>
+                      <motion.span
+                        initial={{ opacity: 0, x: 10 }}
+                        animate={{ opacity: 1, x: 0 }}
+                        transition={{ delay: 0.2 }}
+                      >
+                        Added!
+                      </motion.span>
+                    </motion.div>
+                  )}
+                </AnimatePresence>
+              </motion.div>
+            </form>
           </motion.div>
         </motion.div>
       </div>

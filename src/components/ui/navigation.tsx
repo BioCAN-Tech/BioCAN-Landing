@@ -4,6 +4,7 @@ import React, { useState, useEffect } from 'react'
 import { Menu, X, ChevronRight } from 'lucide-react'
 import { cn, scrollToSection } from '@/lib/utils'
 import Button from './button'
+import Link from 'next/link'
 
 interface NavigationProps {
   className?: string
@@ -40,13 +41,13 @@ export default function Navigation({ className }: NavigationProps) {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between">
           {/* Logo */}
-                  <div className="flex items-center">
-          <img 
-            src="/Images/BioCAN_Logo.png" 
-            alt="BioCAN Logo" 
-            className="w-24 h-24 rounded-lg object-contain"
-          />
-        </div>
+          <Link href="/" className="flex items-center cursor-pointer">
+            <img 
+              src="/Images/BioCAN_Logo.png" 
+              alt="BioCAN Logo" 
+              className="w-24 h-24 rounded-lg object-contain hover:scale-105 transition-transform duration-200"
+            />
+          </Link>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
@@ -65,13 +66,13 @@ export default function Navigation({ className }: NavigationProps) {
           <div className="hidden md:flex items-center space-x-4">
             <Button
               variant="ghost"
-              onClick={() => handleNavClick('contact')}
+              onClick={() => window.location.href = 'https://app.biocan.ai'}
             >
               Sign In
             </Button>
             <Button
               variant="primary"
-              onClick={() => handleNavClick('contact')}
+              onClick={() => window.location.href = 'https://app.biocan.ai'}
             >
               Get Started
               <ChevronRight className="w-4 h-4 ml-2" />
@@ -104,14 +105,14 @@ export default function Navigation({ className }: NavigationProps) {
                   <Button
                     variant="ghost"
                     className="w-full"
-                    onClick={() => handleNavClick('contact')}
+                    onClick={() => window.location.href = 'https://app.biocan.ai'}
                   >
                     Sign In
                   </Button>
                   <Button
                     variant="primary"
                     className="w-full"
-                    onClick={() => handleNavClick('contact')}
+                    onClick={() => window.location.href = 'https://app.biocan.ai'}
                   >
                     Get Started
                     <ChevronRight className="w-4 h-4 ml-2" />
