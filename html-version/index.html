@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BioCAN - Bio Career Advancement Network</title>
+    <meta name="description" content="Accelerate your biotechnology career with BioCAN. Connect with industry leaders, access exclusive opportunities, and advance your scientific journey.">
+    <meta name="keywords" content="biotechnology, career, advancement, network, biotech, science, research">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- Background Effects -->
+    <div class="fixed inset-0 -z-10">
+        <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900"></div>
+        <div class="absolute top-0 left-1/4 w-72 h-72 bg-blue-500/20 rounded-full mix-blend-multiply filter blur-xl animate-float"></div>
+        <div class="absolute top-0 right-1/4 w-72 h-72 bg-purple-500/20 rounded-full mix-blend-multiply filter blur-xl animate-float" style="animation-delay: 2s;"></div>
+        <div class="absolute bottom-0 left-1/3 w-72 h-72 bg-pink-500/20 rounded-full mix-blend-multiply filter blur-xl animate-float" style="animation-delay: 4s;"></div>
+    </div>
+
+    <main class="relative">
+        <!-- Navigation -->
+        <nav id="navigation" class="fixed top-0 left-0 right-0 z-50 py-6 transition-all duration-300">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between">
+                    <!-- Logo -->
+                    <a href="/" class="flex items-center cursor-pointer">
+                        <img src="images/BioCAN_Logo.png" alt="BioCAN Logo" class="w-24 h-24 rounded-lg object-contain hover:scale-105 transition-transform duration-200" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                        <div class="hidden items-center">
+                            <div class="text-2xl font-bold gradient-primary">BioCAN</div>
+                        </div>
+                    </a>
+
+                    <!-- Desktop Navigation -->
+                    <div class="hidden md:flex items-center space-x-8">
+                        <!-- Nav items would go here if any -->
+                    </div>
+
+                    <!-- CTA Buttons -->
+                    <div class="hidden md:flex items-center space-x-4">
+                        <button class="btn-ghost" onclick="window.location.href='https://app.biocan.ai'">
+                            Sign In
+                        </button>
+                        <button class="btn-primary" onclick="window.location.href='https://app.biocan.ai'">
+                            Get Started
+                            <i data-lucide="chevron-right" class="w-4 h-4 ml-2"></i>
+                        </button>
+                    </div>
+
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg glass-card text-white">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+
+                <!-- Mobile Navigation -->
+                <div id="mobile-menu" class="md:hidden mt-6 glass-card rounded-2xl p-6 animate-slide-down hidden">
+                    <div class="space-y-4">
+                        <div class="pt-4 border-t border-white/10 space-y-3">
+                            <button class="btn-ghost w-full" onclick="window.location.href='https://app.biocan.ai'">
+                                Sign In
+                            </button>
+                            <button class="btn-primary w-full" onclick="window.location.href='https://app.biocan.ai'">
+                                Get Started
+                                <i data-lucide="chevron-right" class="w-4 h-4 ml-2"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <section class="relative min-h-screen flex items-center justify-center overflow-hidden">
+            <!-- Enhanced Background Effects -->
+            <div class="absolute inset-0 -z-10">
+                <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900"></div>
+                
+                <!-- Animated Floating Elements -->
+                <div class="floating-element" style="left: 40%; top: 50%;"></div>
+                <div class="floating-element" style="left: 0%; top: 30%; animation-delay: 1s;"></div>
+                <div class="floating-element" style="left: 50%; top: 80%; animation-delay: 2s;"></div>
+                <div class="floating-element" style="left: 20%; top: 20%; animation-delay: 1.5s;"></div>
+
+                <!-- Particle Effect -->
+                <div class="absolute inset-0" id="particles"></div>
+            </div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+                <div class="text-center animate-fade-in">
+                    <!-- Coming Soon Badge -->
+                    <div class="inline-flex items-center mb-8 animate-slide-up" style="animation-delay: 0.2s;">
+                        <div class="glass-card px-6 py-3 rounded-full relative overflow-hidden group cursor-pointer">
+                            <div class="animated-shimmer"></div>
+                            <div class="relative flex items-center">
+                                <i data-lucide="sparkles" class="w-4 h-4 text-blue-400 mr-2 animate-pulse"></i>
+                                <span class="text-blue-400 font-medium">🚀 Launching Soon - AI-Powered Career Intelligence</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Main Headline -->
+                    <div class="mb-8">
+                        <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold leading-tight">
+                            <span class="block text-white animate-slide-up" style="animation-delay: 0.5s;">Navigate Your</span>
+                            <span class="block gradient-primary animate-scale-in" style="animation-delay: 0.8s;">Life Science Career</span>
+                            <span class="block text-white animate-slide-up" style="animation-delay: 1.1s;">with AI Intelligence</span>
+                        </h1>
+                    </div>
+
+                    <!-- Pain Point Carousel -->
+                    <div class="mb-12 animate-slide-up" style="animation-delay: 1.4s;">
+                        <p class="text-xl md:text-2xl text-gray-300 mb-8">
+                            The reality for life science graduates today:
+                        </p>
+                        
+                        <div class="glass-card p-6 rounded-2xl max-w-4xl mx-auto relative overflow-hidden">
+                            <div id="pain-point-carousel" class="min-h-24 flex items-center justify-center">
+                                <!-- Pain points will be dynamically inserted here -->
+                            </div>
+                            <div class="flex justify-center mt-4 space-x-2">
+                                <div class="pain-point-dot active" data-index="0"></div>
+                                <div class="pain-point-dot" data-index="1"></div>
+                                <div class="pain-point-dot" data-index="2"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Early Access CTA -->
+                    <div class="glass-card p-6 rounded-2xl max-w-2xl mx-auto animate-slide-up" style="animation-delay: 1.7s;">
+                        <p class="text-gray-300 mb-4">
+                            Be among the first to experience AI-powered career intelligence
+                        </p>
+                        <form id="hero-email-form" class="flex flex-col sm:flex-row gap-3">
+                            <input type="email" id="hero-email" placeholder="Enter your email for early access" class="form-input flex-1" required>
+                            <div class="relative overflow-hidden">
+                                <button type="submit" class="btn-primary whitespace-nowrap" id="hero-submit-btn">
+                                    Get Early Access
+                                </button>
+                                <div class="success-message hidden" id="hero-success">
+                                    <i data-lucide="check" class="w-5 h-5 mr-2"></i>
+                                    Added!
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+
+                    <!-- Scroll Indicator -->
+                    <div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 animate-bounce">
+                        <button onclick="scrollToSection('problem')" class="text-white/60 hover:text-white transition-colors">
+                            <i data-lucide="chevron-down" class="w-6 h-6"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Problem Visualization Section -->
+        <section id="problem" class="py-24 relative overflow-hidden">
+            <!-- Animated Background -->
+            <div class="absolute inset-0 -z-10">
+                <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-red-900/10 to-slate-900"></div>
+                
+                <!-- Floating Problem Indicators -->
+                <div class="absolute inset-0" id="problem-particles"></div>
+            </div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- Section Header -->
+                <div class="text-center mb-16 animate-fade-in">
+                    <div class="inline-flex items-center mb-6">
+                        <i data-lucide="alert-triangle" class="w-6 h-6 text-red-400 mr-2"></i>
+                        <span class="text-red-400 font-medium">The Career Crisis</span>
+                    </div>
+                    <h2 class="text-4xl md:text-6xl font-bold text-white mb-6">
+                        The Life Science Career
+                        <span class="block text-red-400">Misalignment Problem</span>
+                    </h2>
+                    <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                        Talented graduates are facing unprecedented challenges in navigating their careers. 
+                        Here's the reality of what they're experiencing.
+                    </p>
+                </div>
+
+                <!-- Main Problem Visualization -->
+                <div class="max-w-6xl mx-auto">
+                    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-16">
+                        <!-- Combined Statistic & Reality Display -->
+                        <div class="lg:col-span-8 relative animate-slide-up">
+                            <div class="glass-card rounded-2xl relative overflow-hidden">
+                                <div id="problem-stat-display">
+                                    <!-- Problem statistics will be dynamically inserted here -->
+                                </div>
+
+                                <!-- Navigation Arrows -->
+                                <button class="problem-nav-btn left-3" id="problem-prev">
+                                    <i data-lucide="chevron-left" class="w-5 h-5"></i>
+                                </button>
+                                <button class="problem-nav-btn right-3" id="problem-next">
+                                    <i data-lucide="chevron-right" class="w-5 h-5"></i>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Additional Stats -->
+                        <div class="lg:col-span-4 animate-slide-up" style="animation-delay: 0.2s;">
+                            <div class="h-full flex flex-col space-y-4">
+                                <div class="glass-card p-5 rounded-2xl group hover:scale-105 transition-all duration-300 border border-white/5 hover:border-red-400/30 flex-1 flex items-center">
+                                    <div class="flex items-center space-x-4 w-full">
+                                        <div class="bg-gradient-to-r from-red-500/20 to-orange-500/20 w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0">
+                                            <i data-lucide="clock" class="w-6 h-6 text-red-400"></i>
+                                        </div>
+                                        <div class="flex-1">
+                                            <div class="text-2xl font-bold text-white leading-none mb-1.5">
+                                                8-12
+                                                <span class="text-sm text-red-400 ml-1">months</span>
+                                            </div>
+                                            <div class="text-gray-400 text-sm leading-tight">Average job search duration</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="glass-card p-5 rounded-2xl group hover:scale-105 transition-all duration-300 border border-white/5 hover:border-red-400/30 flex-1 flex items-center">
+                                    <div class="flex items-center space-x-4 w-full">
+                                        <div class="bg-gradient-to-r from-red-500/20 to-orange-500/20 w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0">
+                                            <i data-lucide="trending-down" class="w-6 h-6 text-red-400"></i>
+                                        </div>
+                                        <div class="flex-1">
+                                            <div class="text-2xl font-bold text-white leading-none mb-1.5">
+                                                40%
+                                            </div>
+                                            <div class="text-gray-400 text-sm leading-tight">Consider leaving life sciences</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="glass-card p-5 rounded-2xl group hover:scale-105 transition-all duration-300 border border-white/5 hover:border-red-400/30 flex-1 flex items-center">
+                                    <div class="flex items-center space-x-4 w-full">
+                                        <div class="bg-gradient-to-r from-red-500/20 to-orange-500/20 w-12 h-12 rounded-xl flex items-center justify-center flex-shrink-0">
+                                            <i data-lucide="target" class="w-6 h-6 text-red-400"></i>
+                                        </div>
+                                        <div class="flex-1">
+                                            <div class="text-2xl font-bold text-white leading-none mb-1.5">
+                                                3.2
+                                                <span class="text-sm text-red-400 ml-1">years</span>
+                                            </div>
+                                            <div class="text-gray-400 text-sm leading-tight">To find ideal role</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section id="solution" class="py-24 relative overflow-hidden">
+            <!-- Dynamic Background Effects -->
+            <div class="absolute inset-0 -z-10">
+                <div class="absolute top-0 left-1/4 w-96 h-96 bg-blue-500/5 rounded-full blur-3xl"></div>
+                <div class="absolute bottom-0 right-1/4 w-96 h-96 bg-purple-500/5 rounded-full blur-3xl"></div>
+                
+                <!-- Animated Grid -->
+                <div class="absolute inset-0 opacity-10">
+                    <div class="absolute inset-0 grid-pattern"></div>
+                </div>
+            </div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16 animate-fade-in">
+                    <div class="inline-flex items-center mb-6">
+                        <i data-lucide="sparkles" class="w-6 h-6 text-blue-400 mr-2"></i>
+                        <span class="text-blue-400 font-medium">AI-Powered Solution</span>
+                    </div>
+                    <h2 class="text-4xl md:text-6xl font-bold text-white mb-6">
+                        Your Career Intelligence
+                        <span class="block gradient-primary">Ecosystem</span>
+                    </h2>
+                    <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                        BioCAN's three-phase approach uses AI to transform how life science professionals 
+                        discover opportunities, develop skills, and deploy their careers.
+                    </p>
+                </div>
+
+                <!-- Main Feature Cards -->
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-20" id="main-features">
+                    <!-- Features will be dynamically inserted here -->
+                </div>
+
+                <!-- Additional Features Grid -->
+                <div class="text-center mb-12 animate-fade-in">
+                    <h3 class="text-3xl font-bold text-white mb-4">Enhanced Career Intelligence</h3>
+                    <p class="text-gray-300 max-w-2xl mx-auto">
+                        Additional AI-powered tools to accelerate your career advancement
+                    </p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto" id="additional-features">
+                    <!-- Additional features will be dynamically inserted here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Early Interest Section -->
+        <section id="early-interest" class="py-24 relative overflow-hidden">
+            <div class="absolute inset-0 -z-10">
+                <div class="absolute top-0 right-1/4 w-96 h-96 bg-blue-500/10 rounded-full blur-3xl"></div>
+                <div class="absolute bottom-0 left-1/4 w-96 h-96 bg-purple-500/10 rounded-full blur-3xl"></div>
+                
+                <!-- Animated Connection Lines -->
+                <div class="absolute inset-0 opacity-20" id="connection-lines"></div>
+            </div>
+
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-16 animate-fade-in">
+                    <h2 class="text-4xl md:text-5xl font-bold text-white mb-6">
+                        Experience AI-Powered
+                        <span class="block gradient-primary">Career Intelligence</span>
+                    </h2>
+                    <p class="text-xl text-gray-300 max-w-3xl mx-auto">
+                        Be among the first to access our revolutionary platform. Join the waitlist for exclusive early access and beta testing opportunities.
+                    </p>
+                </div>
+
+                <!-- Early Interest Stats -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto mb-16 animate-slide-up" style="animation-delay: 0.3s;">
+                    <div class="glass-card p-6 rounded-2xl text-center group hover:scale-105 transition-transform">
+                        <i data-lucide="users" class="w-8 h-8 text-blue-400 mx-auto mb-3 group-hover:scale-110 transition-transform"></i>
+                        <div class="text-3xl md:text-4xl font-bold gradient-primary mb-2">500+</div>
+                        <div class="text-gray-400 text-sm leading-tight">Beta Waitlist Signups</div>
+                    </div>
+                    <div class="glass-card p-6 rounded-2xl text-center group hover:scale-105 transition-transform">
+                        <i data-lucide="star" class="w-8 h-8 text-blue-400 mx-auto mb-3 group-hover:scale-110 transition-transform"></i>
+                        <div class="text-3xl md:text-4xl font-bold gradient-primary mb-2">15</div>
+                        <div class="text-gray-400 text-sm leading-tight">Universities Interested</div>
+                    </div>
+                    <div class="glass-card p-6 rounded-2xl text-center group hover:scale-105 transition-transform">
+                        <i data-lucide="trending-up" class="w-8 h-8 text-blue-400 mx-auto mb-3 group-hover:scale-110 transition-transform"></i>
+                        <div class="text-3xl md:text-4xl font-bold gradient-primary mb-2">85%</div>
+                        <div class="text-gray-400 text-sm leading-tight">Say "This is Much Needed"</div>
+                    </div>
+                    <div class="glass-card p-6 rounded-2xl text-center group hover:scale-105 transition-transform">
+                        <i data-lucide="clock" class="w-8 h-8 text-blue-400 mx-auto mb-3 group-hover:scale-110 transition-transform"></i>
+                        <div class="text-3xl md:text-4xl font-bold gradient-primary mb-2">3 weeks</div>
+                        <div class="text-gray-400 text-sm leading-tight">Since We Started Outreach</div>
+                    </div>
+                </div>
+
+                <!-- Join the Movement CTA -->
+                <div class="text-center animate-slide-up" style="animation-delay: 0.5s;">
+                    <div class="glass-card p-8 rounded-3xl max-w-4xl mx-auto relative overflow-hidden">
+                        <div class="animated-shimmer"></div>
+                        
+                        <div class="relative">
+                            <h3 class="text-3xl font-bold text-white mb-4">
+                                Experience AI-Powered Career Intelligence
+                            </h3>
+                            <p class="text-xl text-gray-300 mb-8">
+                                Be part of the movement to revolutionize life science careers. Get exclusive updates, 
+                                early access opportunities, and connect with like-minded professionals.
+                            </p>
+                            
+                            <div id="waitlist-cta">
+                                <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-6">
+                                    <button class="bg-gradient-to-r from-blue-600 to-purple-600 text-white px-8 py-4 rounded-xl font-medium hover:from-blue-700 hover:to-purple-700 transition-all duration-200 shadow-lg hover:shadow-xl hover:scale-105" onclick="showEmailForm()">
+                                        Join Beta Waitlist
+                                    </button>
+                                    <button class="glass-card text-white px-8 py-4 rounded-xl font-medium hover:bg-white/10 transition-all duration-200 flex items-center gap-2 hover:scale-105" onclick="window.location.href='https://app.biocan.ai'">
+                                        <i data-lucide="brain" class="w-5 h-5"></i>
+                                        Try Career Assessment
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div id="email-form-section" class="hidden mb-6">
+                                <form id="waitlist-email-form">
+                                    <div class="flex flex-col sm:flex-row gap-3 max-w-2xl mx-auto">
+                                        <input type="email" id="waitlist-email" placeholder="Enter your email to join beta waitlist" class="form-input flex-1" required>
+                                        <div class="relative overflow-hidden">
+                                            <button type="submit" class="btn-primary whitespace-nowrap" id="waitlist-submit-btn">
+                                                Join Beta Waitlist
+                                            </button>
+                                            <div class="success-message hidden" id="waitlist-success">
+                                                <i data-lucide="check" class="w-5 h-5 mr-2"></i>
+                                                Added to Waitlist!
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+                                
+                                <!-- Back Button -->
+                                <div class="flex justify-center mt-4">
+                                    <button onclick="hideEmailForm()" class="text-gray-400 hover:text-white transition-colors text-sm">
+                                        ← Back to options
+                                    </button>
+                                </div>
+                            </div>
+                            
+                            <p class="text-sm text-gray-400 mt-4">
+                                Join 500+ life science professionals already on our waitlist
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-16 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+                <h2 class="text-3xl font-bold text-white mb-4">Ready to Transform Your Career?</h2>
+                <p class="text-gray-300 mb-8">Contact us to learn more about BioCAN's AI-powered career intelligence</p>
+                <a href="contact.html" class="btn-primary inline-flex items-center">
+                    Contact Us
+                    <i data-lucide="arrow-right" class="w-4 h-4 ml-2"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-black/30 border-t border-white/5 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                <div class="max-w-6xl mx-auto">
+                    <div class="text-center">
+                        <!-- Contact Information -->
+                        <div class="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6 mb-6">
+                            <div class="flex items-center text-gray-500 text-sm">
+                                <i data-lucide="mail" class="w-4 h-4 mr-2"></i>
+                                <span>arjun@biocan.ai</span>
+                            </div>
+                            <div class="flex items-center text-gray-500 text-sm">
+                                <i data-lucide="phone" class="w-4 h-4 mr-2"></i>
+                                <span>+91 9044404142</span>
+                            </div>
+                            <div class="flex items-center text-gray-500 text-sm">
+                                <i data-lucide="map-pin" class="w-4 h-4 mr-2"></i>
+                                <span>#17 Siddappa Square, K R Mohalla, Mysuru</span>
+                            </div>
+                        </div>
+
+                        <!-- Legal Links -->
+                        <div class="border-t border-white/5 pt-4">
+                            <div class="flex flex-wrap items-center justify-center gap-4">
+                                <a href="privacy-policy.html" class="text-gray-500 hover:text-gray-400 transition-colors text-xs">Privacy Policy</a>
+                                <a href="terms.html" class="text-gray-500 hover:text-gray-400 transition-colors text-xs">Terms & Conditions</a>
+                                <a href="cancellation-refund.html" class="text-gray-500 hover:text-gray-400 transition-colors text-xs">Cancellation & Refund</a>
+                                <a href="shipping-delivery.html" class="text-gray-500 hover:text-gray-400 transition-colors text-xs">Service Delivery</a>
+                                <a href="contact.html" class="text-gray-500 hover:text-gray-400 transition-colors text-xs">Contact Us</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between animate-fade-in" style="animation-delay: 0.5s;">
+                    <div class="text-gray-400 text-sm mb-4 md:mb-0">
+                        © 2024 BioCAN. All rights reserved.
+                    </div>
+                    
+                    <div class="flex items-center space-x-6">
+                        <span class="text-gray-400 text-sm">Made with ❤️ for Lifescience professionals</span>
+                        <button onclick="scrollToTop()" class="glass-card p-2 rounded-lg text-gray-400 hover:text-white hover:scale-110 transition-all">
+                            <i data-lucide="arrow-up" class="w-4 h-4"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html> 

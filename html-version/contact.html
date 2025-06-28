@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - BioCAN</title>
+    <meta name="description" content="Get in touch with the BioCAN team - we're here to help advance your career">
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <main class="relative">
+        <!-- Navigation -->
+        <nav id="navigation" class="fixed top-0 left-0 right-0 z-50 py-6 transition-all duration-300">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex items-center justify-between">
+                    <!-- Logo -->
+                    <a href="index.html" class="flex items-center cursor-pointer">
+                        <img src="images/BioCAN_Logo.png" alt="BioCAN Logo" class="w-24 h-24 rounded-lg object-contain hover:scale-105 transition-transform duration-200">
+                    </a>
+
+                    <!-- Desktop Navigation -->
+                    <div class="hidden md:flex items-center space-x-8">
+                        <!-- Nav items would go here if any -->
+                    </div>
+
+                    <!-- CTA Buttons -->
+                    <div class="hidden md:flex items-center space-x-4">
+                        <button class="btn-ghost" onclick="window.location.href='https://app.biocan.ai'">
+                            Sign In
+                        </button>
+                        <button class="btn-primary" onclick="window.location.href='https://app.biocan.ai'">
+                            Get Started
+                            <i data-lucide="chevron-right" class="w-4 h-4 ml-2"></i>
+                        </button>
+                    </div>
+
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-btn" class="md:hidden p-2 rounded-lg glass-card text-white">
+                        <i data-lucide="menu" class="w-6 h-6"></i>
+                    </button>
+                </div>
+
+                <!-- Mobile Navigation -->
+                <div id="mobile-menu" class="md:hidden mt-6 glass-card rounded-2xl p-6 animate-slide-down hidden">
+                    <div class="space-y-4">
+                        <div class="pt-4 border-t border-white/10 space-y-3">
+                            <button class="btn-ghost w-full" onclick="window.location.href='https://app.biocan.ai'">
+                                Sign In
+                            </button>
+                            <button class="btn-primary w-full" onclick="window.location.href='https://app.biocan.ai'">
+                                Get Started
+                                <i data-lucide="chevron-right" class="w-4 h-4 ml-2"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        
+        <!-- Hero Section -->
+        <section class="relative pt-32 pb-16 overflow-hidden">
+            <div class="absolute inset-0 -z-10">
+                <div class="absolute inset-0 bg-gradient-to-br from-slate-900 via-purple-900/20 to-slate-900"></div>
+            </div>
+            
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h1 class="text-4xl md:text-5xl font-bold text-white mb-6">
+                        Contact Us
+                    </h1>
+                    <p class="text-xl text-gray-300">
+                        Get in touch with the BioCAN team - we're here to help advance your career
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Information Section -->
+        <section class="py-16">
+            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="grid lg:grid-cols-2 gap-12">
+                    <!-- Contact Info -->
+                    <div class="space-y-8">
+                        <div>
+                            <h2 class="text-3xl font-bold text-white mb-6">Get in Touch</h2>
+                            <p class="text-gray-300 leading-relaxed mb-8">
+                                Have questions about BioCAN's AI-powered career intelligence platform? 
+                                Want to join our beta program? We'd love to hear from you.
+                            </p>
+                        </div>
+
+                        <div class="space-y-6">
+                            <div class="flex items-start space-x-4">
+                                <div class="glass-card p-3 rounded-xl">
+                                    <i data-lucide="mail" class="w-6 h-6 text-purple-400"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-semibold text-white mb-1">Email</h3>
+                                    <p class="text-gray-300">arjun@biocan.ai</p>
+                                    <p class="text-sm text-gray-400 mt-1">We typically respond within 24 hours</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div class="glass-card p-3 rounded-xl">
+                                    <i data-lucide="phone" class="w-6 h-6 text-purple-400"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-semibold text-white mb-1">Phone</h3>
+                                    <p class="text-gray-300">+91 9044404142</p>
+                                    <p class="text-sm text-gray-400 mt-1">Monday to Friday, 9 AM to 6 PM IST</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div class="glass-card p-3 rounded-xl">
+                                    <i data-lucide="map-pin" class="w-6 h-6 text-purple-400"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-semibold text-white mb-1">Address</h3>
+                                    <p class="text-gray-300">#17 Siddappa Square</p>
+                                    <p class="text-gray-300">K R Mohalla, Mysuru</p>
+                                    <p class="text-gray-300">Karnataka, India</p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start space-x-4">
+                                <div class="glass-card p-3 rounded-xl">
+                                    <i data-lucide="clock" class="w-6 h-6 text-purple-400"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-lg font-semibold text-white mb-1">Support Hours</h3>
+                                    <p class="text-gray-300">Monday - Friday: 9 AM - 6 PM IST</p>
+                                    <p class="text-gray-300">Weekend: Emergency support only</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Contact Form -->
+                    <div class="glass-card p-8 rounded-2xl">
+                        <h3 class="text-2xl font-bold text-white mb-6">Send us a Message</h3>
+                        <form id="contact-form" class="space-y-6">
+                            <div class="grid sm:grid-cols-2 gap-6">
+                                <div>
+                                    <label for="firstName" class="block text-sm font-medium text-gray-300 mb-2">
+                                        First Name
+                                    </label>
+                                    <input
+                                        type="text"
+                                        id="firstName"
+                                        class="form-input w-full"
+                                        placeholder="Enter your first name"
+                                        required
+                                    />
+                                </div>
+                                <div>
+                                    <label for="lastName" class="block text-sm font-medium text-gray-300 mb-2">
+                                        Last Name
+                                    </label>
+                                    <input
+                                        type="text"
+                                        id="lastName"
+                                        class="form-input w-full"
+                                        placeholder="Enter your last name"
+                                        required
+                                    />
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-300 mb-2">
+                                    Email Address
+                                </label>
+                                <input
+                                    type="email"
+                                    id="email"
+                                    class="form-input w-full"
+                                    placeholder="Enter your email"
+                                    required
+                                />
+                            </div>
+
+                            <div>
+                                <label for="subject" class="block text-sm font-medium text-gray-300 mb-2">
+                                    Subject
+                                </label>
+                                <select
+                                    id="subject"
+                                    class="form-input w-full"
+                                    required
+                                >
+                                    <option value="">Select a subject</option>
+                                    <option value="beta-access">Beta Access Request</option>
+                                    <option value="partnership">Partnership Inquiry</option>
+                                    <option value="support">Technical Support</option>
+                                    <option value="feedback">Feedback</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-300 mb-2">
+                                    Message
+                                </label>
+                                <textarea
+                                    id="message"
+                                    rows="5"
+                                    class="form-input w-full resize-none"
+                                    placeholder="Tell us how we can help you..."
+                                    required
+                                ></textarea>
+                            </div>
+
+                            <div class="relative overflow-hidden">
+                                <button type="submit" class="btn-primary w-full" id="contact-submit-btn">
+                                    Send Message
+                                </button>
+                                <div class="success-message hidden" id="contact-success">
+                                    <i data-lucide="check" class="w-5 h-5 mr-2"></i>
+                                    Message Sent!
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="py-16 border-t border-white/10">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl font-bold text-white mb-4">Frequently Asked Questions</h2>
+                    <p class="text-gray-300">Quick answers to common questions about BioCAN</p>
+                </div>
+
+                <div class="space-y-6">
+                    <div class="glass-card p-6 rounded-xl">
+                        <h3 class="text-lg font-semibold text-white mb-2">When will BioCAN be available?</h3>
+                        <p class="text-gray-300">We're currently in beta testing phase. Join our waitlist to get early access when we launch.</p>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-xl">
+                        <h3 class="text-lg font-semibold text-white mb-2">How does the AI career assessment work?</h3>
+                        <p class="text-gray-300">Our AI analyzes your skills, experience, and career goals to provide personalized insights and recommendations for advancement in life sciences.</p>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-xl">
+                        <h3 class="text-lg font-semibold text-white mb-2">Is there a cost for beta access?</h3>
+                        <p class="text-gray-300">Beta access is currently free for selected participants. We'll announce pricing details before the official launch.</p>
+                    </div>
+
+                    <div class="glass-card p-6 rounded-xl">
+                        <h3 class="text-lg font-semibold text-white mb-2">Can universities partner with BioCAN?</h3>
+                        <p class="text-gray-300">Yes! We're actively partnering with universities to help their life science students. Contact us to discuss partnership opportunities.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="bg-black/30 border-t border-white/5 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+                <div class="max-w-6xl mx-auto">
+                    <div class="text-center">
+                        <!-- Contact Information -->
+                        <div class="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-6 mb-6">
+                            <div class="flex items-center text-gray-500 text-sm">
+                                <i data-lucide="mail" class="w-4 h-4 mr-2"></i>
+                                <span>arjun@biocan.ai</span>
+                            </div>
+                            <div class="flex items-center text-gray-500 text-sm">
+                                <i data-lucide="phone" class="w-4 h-4 mr-2"></i>
+                                <span>+91 9044404142</span>
+                            </div>
+                            <div class="flex items-center text-gray-500 text-sm">
+                                <i data-lucide="map-pin" class="w-4 h-4 mr-2"></i>
+                                <span>#17 Siddappa Square, K R Mohalla, Mysuru</span>
+                            </div>
+                        </div>
+
+                        <!-- Legal Links -->
+                        <div class="border-t border-white/5 pt-4">
+                            <div class="flex flex-wrap items-center justify-center gap-4">
+                                <a href="privacy-policy.html" class="text-gray-500 hover:text-gray-400 transition-colors text-xs">Privacy Policy</a>
+                                <a href="terms.html" class="text-gray-500 hover:text-gray-400 transition-colors text-xs">Terms & Conditions</a>
+                                <a href="cancellation-refund.html" class="text-gray-500 hover:text-gray-400 transition-colors text-xs">Cancellation & Refund</a>
+                                <a href="shipping-delivery.html" class="text-gray-500 hover:text-gray-400 transition-colors text-xs">Service Delivery</a>
+                                <a href="contact.html" class="text-gray-500 hover:text-gray-400 transition-colors text-xs">Contact Us</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="border-t border-white/10 mt-12 pt-8 flex flex-col md:flex-row items-center justify-between">
+                    <div class="text-gray-400 text-sm mb-4 md:mb-0">
+                        © 2024 BioCAN. All rights reserved.
+                    </div>
+                    
+                    <div class="flex items-center space-x-6">
+                        <span class="text-gray-400 text-sm">Made with ❤️ for Lifescience professionals</span>
+                        <button onclick="scrollToTop()" class="glass-card p-2 rounded-lg text-gray-400 hover:text-white hover:scale-110 transition-all">
+                            <i data-lucide="arrow-up" class="w-4 h-4"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html> 
