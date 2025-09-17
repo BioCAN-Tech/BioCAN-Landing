@@ -156,7 +156,7 @@ export default function Features() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
-          className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-20"
+          className="grid grid-cols-1 lg:grid-cols-3 gap-8 mb-4"
         >
           {mainFeatures.map((feature, index) => (
             <motion.div
@@ -247,53 +247,12 @@ export default function Features() {
           ))}
         </motion.div>
 
-        {/* Additional Features Grid */}
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.3 }}
-          viewport={{ once: true }}
-          className="mb-16"
-        >
-          <h3 className="text-3xl font-bold text-white text-center mb-12">
-            Enhanced by <span className="gradient-primary">AI Intelligence</span>
-          </h3>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {additionalFeatures.map((feature, index) => (
-              <motion.div
-                key={feature.title}
-                className="glass-card p-6 rounded-2xl group cursor-pointer relative overflow-hidden"
-                whileHover={{ scale: 1.05 }}
-                onMouseEnter={() => setHoveredCard(index)}
-                onMouseLeave={() => setHoveredCard(null)}
-              >
-                <div className={`w-14 h-14 rounded-xl bg-gradient-to-r ${feature.color} p-3 mb-4 group-hover:scale-110 transition-transform duration-300`}>
-                  <feature.icon className="w-8 h-8 text-white" />
-                </div>
-                
-                <h4 className="text-xl font-bold text-white mb-3">{feature.title}</h4>
-                <p className="text-gray-300 text-sm leading-relaxed">{feature.description}</p>
-
-                {/* Animated Background */}
-                <motion.div
-                  className={`absolute inset-0 bg-gradient-to-r ${feature.color} opacity-0 group-hover:opacity-5 transition-opacity duration-500`}
-                />
-
-                {/* Hover Indicator */}
-                {hoveredCard === index && (
-                  <motion.div
-                    className="absolute inset-0 border-2 border-blue-400/30 rounded-2xl"
-                    initial={{ scale: 0.8, opacity: 0 }}
-                    animate={{ scale: 1, opacity: 1 }}
-                    exit={{ scale: 0.8, opacity: 0 }}
-                  />
-                )}
-              </motion.div>
-            ))}
-          </div>
-        </motion.div>
-
+        {/* Additional Features Grid - COMMENTED OUT 
+        Enhanced by AI Intelligence section with:
+        - Industry Happenings: AI gathers live data on industry trends and suggests relevant events
+        - Expert Network Access: Connect with industry professionals and thought leaders  
+        - Career Analytics: Track your progress with detailed career advancement metrics
+        */}
 
       </div>
     </section>
