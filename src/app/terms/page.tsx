@@ -122,17 +122,17 @@ export default function TermsPage() {
                   <p className="text-gray-300 leading-relaxed mb-4">
                     BioCAN offers both free and premium subscription services. Premium features require payment processed through Razorpay.
                   </p>
-                  <h3 className="text-xl font-semibold text-white mb-3">Subscription Terms:</h3>
+                  <h3 className="text-xl font-semibold text-white mb-3">Payment Terms:</h3>
                   <ul className="list-disc list-inside text-gray-300 space-y-2 ml-4 mb-4">
-                    <li>Subscriptions are billed in advance</li>
+                    <li>One-time payment of ₹99 INR for premium access</li>
                     <li>All payments are processed securely through Razorpay</li>
                     <li>Prices are subject to change with 30 days notice</li>
                     <li>Premium features are activated immediately upon payment</li>
-                    <li>Account downgrades take effect at the end of the billing cycle</li>
+                    <li>No recurring billing or auto-renewal</li>
                   </ul>
                   <h3 className="text-xl font-semibold text-white mb-3">Payment Processing:</h3>
                   <p className="text-gray-300 leading-relaxed">
-                    We use Razorpay for secure payment processing. By providing payment information, you represent that you are authorized to use the payment method and authorize us to charge all fees incurred.
+                    We use Razorpay for secure payment processing. The one-time premium access fee is ₹99 INR. By providing payment information, you represent that you are authorized to use the payment method and authorize us to charge the one-time fee.
                   </p>
                 </div>
 
@@ -207,7 +207,7 @@ export default function TermsPage() {
                   <ul className="list-disc list-inside text-gray-300 space-y-2 ml-4">
                     <li>Access to premium features will cease immediately</li>
                     <li>Your data will be handled according to our Privacy Policy</li>
-                    <li>No refunds will be provided for unused subscription periods</li>
+                    <li>No refunds will be provided for the one-time premium access fee</li>
                     <li>You may request data export within 30 days</li>
                   </ul>
                 </div>
