@@ -38,10 +38,6 @@ export default function Footer() {
                 <Phone className="w-4 h-4 mr-2" />
                 <span>+91 9044404142</span>
               </div>
-              <div className="flex items-center text-gray-500 text-sm">
-                <MapPin className="w-4 h-4 mr-2" />
-                <span>#17 Siddappa Square, K R Mohalla, Mysuru</span>
-              </div>
             </div>
 
             {/* Legal Links - Compact */}
