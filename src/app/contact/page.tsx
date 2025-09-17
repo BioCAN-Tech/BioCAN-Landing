@@ -46,7 +46,8 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-1">Email</h3>
-                    <p className="text-gray-300">arjun@biocan.ai</p>
+                    <p className="text-gray-300">team.biocan@gmail.com</p>
+                    <p className="text-gray-300">support@biocan.ai</p>
                     <p className="text-sm text-gray-400 mt-1">We typically respond within 24 hours</p>
                   </div>
                 </div>
@@ -68,7 +69,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-1">Address</h3>
-                    <p className="text-gray-300">#17 Siddappa Square</p>
+                    <p className="text-gray-300">#1782/1 Seetha Ram Rao Road, Siddappa Square</p>
                     <p className="text-gray-300">K R Mohalla, Mysuru</p>
                     <p className="text-gray-300">Karnataka, India</p>
                   </div>
@@ -134,14 +135,13 @@ export default function ContactPage() {
                   </label>
                   <select
                     id="subject"
-                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent"
+                    className="w-full px-4 py-3 bg-white/5 border border-white/10 rounded-xl text-white focus:outline-none focus:ring-2 focus:ring-purple-500 focus:border-transparent [&>option]:bg-gray-800 [&>option]:text-white"
                   >
-                    <option value="">Select a subject</option>
-                    <option value="beta-access">Beta Access Request</option>
-                    <option value="partnership">Partnership Inquiry</option>
-                    <option value="support">Technical Support</option>
-                    <option value="feedback">Feedback</option>
-                    <option value="other">Other</option>
+                    <option value="" className="bg-gray-800 text-gray-400">Select a subject</option>
+                    <option value="general-inquiry" className="bg-gray-800 text-white">General Inquiry</option>
+                    <option value="premium-access" className="bg-gray-800 text-white">Premium Access</option>
+                    <option value="technical-support" className="bg-gray-800 text-white">Technical Support</option>
+                    <option value="partnership" className="bg-gray-800 text-white">Partnership Inquiry</option>
                   </select>
                 </div>
 
@@ -179,23 +179,23 @@ export default function ContactPage() {
 
           <div className="space-y-6">
             <div className="glass-card p-6 rounded-xl">
-              <h3 className="text-lg font-semibold text-white mb-2">When will BioCAN be available?</h3>
-              <p className="text-gray-300">We're currently in beta testing phase. Join our waitlist to get early access when we launch.</p>
+              <h3 className="text-lg font-semibold text-white mb-2">What is BioCAN's pricing model?</h3>
+              <p className="text-gray-300">BioCAN offers a simple one-time payment of ₹99 INR for lifetime premium access. There are no recurring charges or subscriptions - just pay once and access all premium features forever.</p>
             </div>
 
             <div className="glass-card p-6 rounded-xl">
               <h3 className="text-lg font-semibold text-white mb-2">How does the AI career assessment work?</h3>
-              <p className="text-gray-300">Our AI analyzes your skills, experience, and career goals to provide personalized insights and recommendations for advancement in life sciences.</p>
+              <p className="text-gray-300">Our AI analyzes your skills, experience, and career goals using advanced algorithms including MBTI assessments to provide personalized career recommendations and skill development roadmaps for Lifescience professionals.</p>
             </div>
 
             <div className="glass-card p-6 rounded-xl">
-              <h3 className="text-lg font-semibold text-white mb-2">Is there a cost for beta access?</h3>
-              <p className="text-gray-300">Beta access is currently free for selected participants. We'll announce pricing details before the official launch.</p>
+              <h3 className="text-lg font-semibold text-white mb-2">Do you offer refunds for premium access?</h3>
+              <p className="text-gray-300">All sales are final. BioCAN does not offer refunds for the one-time premium access fee. However, we may consider refunds for technical issues or billing errors. Please try our free features before upgrading.</p>
             </div>
 
             <div className="glass-card p-6 rounded-xl">
-              <h3 className="text-lg font-semibold text-white mb-2">Can universities partner with BioCAN?</h3>
-              <p className="text-gray-300">Yes! We're actively partnering with universities to help their life science students. Contact us to discuss partnership opportunities.</p>
+              <h3 className="text-lg font-semibold text-white mb-2">How is BioCAN's service delivered?</h3>
+              <p className="text-gray-300">BioCAN is 100% digital - no physical products are shipped. All services are delivered instantly through our web platform at app.biocan.ai with 24/7 global access and real-time AI processing.</p>
             </div>
           </div>
         </div>
