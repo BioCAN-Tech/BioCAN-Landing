@@ -20,39 +20,44 @@ const nextConfig = {
   poweredByHeader: false,
   compress: true,
   
-  // Security headers
-  async headers() {
-    return [
-      {
-        source: '/(.*)',
-        headers: [
-          {
-            key: 'X-Frame-Options',
-            value: 'DENY',
-          },
-          {
-            key: 'X-Content-Type-Options',
-            value: 'nosniff',
-          },
-          {
-            key: 'Referrer-Policy',
-            value: 'origin-when-cross-origin',
-          },
-        ],
-      },
-    ]
-  },
+  // Security headers (only for non-static export)
+  ...(process.env.NEXT_EXPORT !== 'true' && {
+    async headers() {
+      return [
+        {
+          source: '/(.*)',
+          headers: [
+            {
+              key: 'X-Frame-Options',
+              value: 'DENY',
+            },
+            {
+              key: 'X-Content-Type-Options',
+              value: 'nosniff',
+            },
+            {
+              key: 'Referrer-Policy',
+              value: 'origin-when-cross-origin',
+            },
+          ],
+        },
+      ]
+    },
+  }),
   
-  // Redirects for SEO
-  async redirects() {
-    return [
-      {
-        source: '/home',
-        destination: '/',
-        permanent: true,
-      },
-    ]
-  },
+  // Redirects for SEO (only for non-static export)
+  // Note: For static export, redirects need to be handled at Apache level
+  ...(process.env.NEXT_EXPORT !== 'true' && {
+    async redirects() {
+      return [
+        {
+          source: '/home',
+          destination: '/',
+          permanent: true,
+        },
+      ]
+    },
+  }),
 }
 
 module.exports = nextConfig 
