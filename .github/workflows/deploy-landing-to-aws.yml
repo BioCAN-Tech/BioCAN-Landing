@@ -60,9 +60,15 @@ jobs:
         env:
           EC2_HOST: ${{ secrets.EC2_HOST }}
         run: |
-          set -euo pipefail
+          set -e
           mkdir -p ~/.ssh
-          ssh-keyscan -H "$EC2_HOST" >> ~/.ssh/known_hosts
+          chmod 700 ~/.ssh
+          # Try to add host key, but continue even if it fails
+          ssh-keyscan -H -T 10 "$EC2_HOST" >> ~/.ssh/known_hosts 2>&1 || {
+            echo "Warning: Could not scan host key, will use StrictHostKeyChecking=accept-new"
+            touch ~/.ssh/known_hosts
+          }
+          chmod 600 ~/.ssh/known_hosts || true
 
       - name: Prepare remote temp dir
         env:
@@ -70,8 +76,9 @@ jobs:
           EC2_USERNAME: ${{ secrets.EC2_USERNAME }}
         run: |
           set -euo pipefail
-          ssh "$EC2_USERNAME@$EC2_HOST" "rm -rf /opt/bitnami/apache2/htdocs-temp && mkdir -p /opt/bitnami/apache2/htdocs-temp"
-          ssh "$EC2_USERNAME@$EC2_HOST" "mkdir -p /opt/bitnami/apache2/htdocs-backups"
+          # Use accept-new to automatically accept host key if not in known_hosts
+          ssh -o StrictHostKeyChecking=accept-new -o ConnectTimeout=30 "$EC2_USERNAME@$EC2_HOST" "rm -rf /opt/bitnami/apache2/htdocs-temp && mkdir -p /opt/bitnami/apache2/htdocs-temp"
+          ssh -o StrictHostKeyChecking=accept-new -o ConnectTimeout=30 "$EC2_USERNAME@$EC2_HOST" "mkdir -p /opt/bitnami/apache2/htdocs-backups"
 
       - name: Upload static files
         env:
@@ -81,7 +88,7 @@ jobs:
           set -euo pipefail
           echo "Uploading static files..."
           tar -czf - -C out . \
-          | ssh "$EC2_USERNAME@$EC2_HOST" "tar -xzf - -C /opt/bitnami/apache2/htdocs-temp"
+          | ssh -o StrictHostKeyChecking=accept-new -o ConnectTimeout=30 "$EC2_USERNAME@$EC2_HOST" "tar -xzf - -C /opt/bitnami/apache2/htdocs-temp"
 
       - name: Deploy on EC2 (backup -> swap -> set permissions)
         env:
@@ -89,7 +96,7 @@ jobs:
           EC2_USERNAME: ${{ secrets.EC2_USERNAME }}
         run: |
           set -euo pipefail
-          ssh "$EC2_USERNAME@$EC2_HOST" "bash -s" <<'EOF'
+          ssh -o StrictHostKeyChecking=accept-new -o ConnectTimeout=30 "$EC2_USERNAME@$EC2_HOST" "bash -s" <<'EOF'
           set -euo pipefail
 
           APACHE_ROOT="/opt/bitnami/apache2/htdocs"
