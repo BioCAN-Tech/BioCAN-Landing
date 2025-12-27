@@ -60,34 +60,36 @@ jobs:
         env:
           EC2_HOST: ${{ secrets.EC2_HOST }}
         run: |
-          set -e
+          set -euo pipefail
           mkdir -p ~/.ssh
-          chmod 700 ~/.ssh
-          # Try to add host key, but don't fail if it doesn't work
-          ssh-keyscan -H "$EC2_HOST" >> ~/.ssh/known_hosts 2>&1 || echo "Warning: Could not add host key, will use StrictHostKeyChecking=no"
-          chmod 600 ~/.ssh/known_hosts || true
+          ssh-keyscan -H "$EC2_HOST" >> ~/.ssh/known_hosts
 
-      - name: Deploy static site to Apache htdocs
+      - name: Prepare remote temp dir
         env:
           EC2_HOST: ${{ secrets.EC2_HOST }}
           EC2_USERNAME: ${{ secrets.EC2_USERNAME }}
         run: |
           set -euo pipefail
+          ssh "$EC2_USERNAME@$EC2_HOST" "rm -rf /opt/bitnami/apache2/htdocs-temp && mkdir -p /opt/bitnami/apache2/htdocs-temp"
+          ssh "$EC2_USERNAME@$EC2_HOST" "mkdir -p /opt/bitnami/apache2/htdocs-backups"
 
-          # SSH options to handle host key checking
-          SSH_OPTS="-o StrictHostKeyChecking=accept-new -o UserKnownHostsFile=~/.ssh/known_hosts -o ConnectTimeout=30"
-
-          # Create temp dir on server
-          ssh $SSH_OPTS "$EC2_USERNAME@$EC2_HOST" "rm -rf /opt/bitnami/apache2/htdocs-temp && mkdir -p /opt/bitnami/apache2/htdocs-temp"
-          ssh $SSH_OPTS "$EC2_USERNAME@$EC2_HOST" "mkdir -p /opt/bitnami/apache2/htdocs-backups"
-
-          # Upload 'out' folder contents to temp dir
+      - name: Upload static files
+        env:
+          EC2_HOST: ${{ secrets.EC2_HOST }}
+          EC2_USERNAME: ${{ secrets.EC2_USERNAME }}
+        run: |
+          set -euo pipefail
           echo "Uploading static files..."
           tar -czf - -C out . \
-          | ssh $SSH_OPTS "$EC2_USERNAME@$EC2_HOST" "tar -xzf - -C /opt/bitnami/apache2/htdocs-temp"
+          | ssh "$EC2_USERNAME@$EC2_HOST" "tar -xzf - -C /opt/bitnami/apache2/htdocs-temp"
 
-          # On server: backup current htdocs, then swap temp -> live
-          ssh $SSH_OPTS "$EC2_USERNAME@$EC2_HOST" "bash -s" <<'EOF'
+      - name: Deploy on EC2 (backup -> swap -> set permissions)
+        env:
+          EC2_HOST: ${{ secrets.EC2_HOST }}
+          EC2_USERNAME: ${{ secrets.EC2_USERNAME }}
+        run: |
+          set -euo pipefail
+          ssh "$EC2_USERNAME@$EC2_HOST" "bash -s" <<'EOF'
           set -euo pipefail
 
           APACHE_ROOT="/opt/bitnami/apache2/htdocs"
