@@ -1,6 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'standalone', // For containerized deployments
+  // Use 'export' for static site generation (Apache deployment)
+  // Use 'standalone' for containerized deployments (uncomment if needed)
+  output: process.env.NEXT_EXPORT === 'true' ? 'export' : 'standalone',
   experimental: {
     optimizePackageImports: ['lucide-react', 'framer-motion']
   },
@@ -11,7 +13,8 @@ const nextConfig = {
         hostname: '**',
       },
     ],
-    unoptimized: false, // Set to true for static export
+    // Static export requires unoptimized images
+    unoptimized: process.env.NEXT_EXPORT === 'true' ? true : false,
   },
   // Performance optimizations
   poweredByHeader: false,
