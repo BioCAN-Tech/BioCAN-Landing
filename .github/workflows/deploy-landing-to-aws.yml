@@ -76,9 +76,9 @@ jobs:
           EC2_USERNAME: ${{ secrets.EC2_USERNAME }}
         run: |
           set -euo pipefail
-          # Use accept-new to automatically accept host key if not in known_hosts
-          ssh -o StrictHostKeyChecking=accept-new -o ConnectTimeout=30 "$EC2_USERNAME@$EC2_HOST" "rm -rf /opt/bitnami/apache2/htdocs-temp && mkdir -p /opt/bitnami/apache2/htdocs-temp"
-          ssh -o StrictHostKeyChecking=accept-new -o ConnectTimeout=30 "$EC2_USERNAME@$EC2_HOST" "mkdir -p /opt/bitnami/apache2/htdocs-backups"
+          # Use home directory for temp (user has full permissions there)
+          ssh -o StrictHostKeyChecking=accept-new -o ConnectTimeout=30 "$EC2_USERNAME@$EC2_HOST" "rm -rf /home/$EC2_USERNAME/htdocs-temp && mkdir -p /home/$EC2_USERNAME/htdocs-temp"
+          ssh -o StrictHostKeyChecking=accept-new -o ConnectTimeout=30 "$EC2_USERNAME@$EC2_HOST" "mkdir -p /home/$EC2_USERNAME/htdocs-backups"
 
       - name: Upload static files
         env:
@@ -88,7 +88,7 @@ jobs:
           set -euo pipefail
           echo "Uploading static files..."
           tar -czf - -C out . \
-          | ssh -o StrictHostKeyChecking=accept-new -o ConnectTimeout=30 "$EC2_USERNAME@$EC2_HOST" "tar -xzf - -C /opt/bitnami/apache2/htdocs-temp"
+          | ssh -o StrictHostKeyChecking=accept-new -o ConnectTimeout=30 "$EC2_USERNAME@$EC2_HOST" "tar -xzf - -C /home/$EC2_USERNAME/htdocs-temp"
 
       - name: Deploy on EC2 (backup -> swap -> set permissions)
         env:
@@ -96,11 +96,12 @@ jobs:
           EC2_USERNAME: ${{ secrets.EC2_USERNAME }}
         run: |
           set -euo pipefail
-          ssh -o StrictHostKeyChecking=accept-new -o ConnectTimeout=30 "$EC2_USERNAME@$EC2_HOST" "bash -s" <<'EOF'
+          ssh -o StrictHostKeyChecking=accept-new -o ConnectTimeout=30 "$EC2_USERNAME@$EC2_HOST" "EC2_USERNAME='$EC2_USERNAME' bash -s" <<'EOF'
           set -euo pipefail
 
           APACHE_ROOT="/opt/bitnami/apache2/htdocs"
-          BACKUPS_DIR="/opt/bitnami/apache2/htdocs-backups"
+          TEMP_DIR="/home/${EC2_USERNAME}/htdocs-temp"
+          BACKUPS_DIR="/home/${EC2_USERNAME}/htdocs-backups"
           TIMESTAMP="$(date +%Y%m%d-%H%M%S)"
           BACKUP_DIR="${BACKUPS_DIR}/htdocs-${TIMESTAMP}"
 
@@ -115,12 +116,13 @@ jobs:
           fi
 
           echo "Deploying new version..."
-          rm -rf "$APACHE_ROOT"
-          mv /opt/bitnami/apache2/htdocs-temp "$APACHE_ROOT"
+          # Use sudo to move files to Apache directory (requires root permissions)
+          sudo rm -rf "$APACHE_ROOT"
+          sudo mv "$TEMP_DIR" "$APACHE_ROOT"
 
           # Set proper permissions (Apache needs read access)
-          chmod -R 755 "$APACHE_ROOT"
-          chown -R bitnami:daemon "$APACHE_ROOT" || chown -R bitnami:bitnami "$APACHE_ROOT"
+          sudo chmod -R 755 "$APACHE_ROOT"
+          sudo chown -R bitnami:daemon "$APACHE_ROOT" || sudo chown -R bitnami:bitnami "$APACHE_ROOT"
 
           # Keep only latest 5 backups
           echo "Cleaning up old backups..."
