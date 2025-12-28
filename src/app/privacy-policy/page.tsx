@@ -31,7 +31,7 @@ export default function PrivacyPolicyPage() {
           <div className="glass-card p-8 md:p-12 rounded-2xl">
             <div className="prose prose-invert max-w-none">
               <p className="text-gray-300 mb-8">
-                <strong>Last updated:</strong> 28/12/2025
+                <strong>Last updated:</strong> 01/09/2025
               </p>
 
               <div className="space-y-8">
