@@ -113,6 +113,18 @@ export default function PrivacyPolicyPage() {
                       <li><strong>Payment Gateway Data:</strong> Transaction IDs, payment status (processed securely, not stored)</li>
                       <li><strong>OAuth Tokens:</strong> Encrypted tokens for Gmail access (stored securely)</li>
                     </ul>
+                    <div className="bg-blue-900/20 border border-blue-500/30 rounded-lg p-3 mt-3">
+                      <p className="text-gray-300 text-sm font-semibold mb-2">Google OAuth and Gmail API Compliance:</p>
+                      <ul className="list-disc list-inside text-gray-300 space-y-1 text-xs ml-4">
+                        <li>Gmail data is accessed only with your explicit OAuth consent through Google's consent screen</li>
+                        <li>We only access email content related to job applications for automatic tracking purposes</li>
+                        <li>Gmail data is not used for advertising or marketing purposes</li>
+                        <li>Gmail data is not transferred to third parties except as necessary to provide the service</li>
+                        <li>You can revoke Gmail access at any time through your account settings or Google account settings</li>
+                        <li>Gmail data access complies with Google API Services User Data Policy</li>
+                        <li>We use Gmail API with restricted scopes limited to reading job-related emails only</li>
+                      </ul>
+                    </div>
                     <p className="text-gray-300 text-sm mt-3">
                       <strong>Important:</strong> We only access third-party data with your explicit consent. You can revoke access at any time through your account settings or the third-party service.
                     </p>
@@ -214,14 +226,20 @@ export default function PrivacyPolicyPage() {
                     <div className="bg-blue-900/20 border border-blue-500/30 rounded-lg p-4">
                       <h3 className="text-xl font-semibold text-white mb-3">Service Providers:</h3>
                       <ul className="list-disc list-inside text-gray-300 space-y-2 ml-4">
-                        <li><strong>Authentication:</strong> Google OAuth for secure login</li>
+                        <li><strong>Authentication:</strong> Google OAuth for secure login (complies with Google OAuth 2.0 policies)</li>
                         <li><strong>Payment Processing:</strong> Razorpay for secure payment processing</li>
                         <li><strong>Cloud Infrastructure:</strong> Secure hosting and data storage</li>
                         <li><strong>Analytics:</strong> Usage analytics for platform improvement</li>
-                        <li><strong>Email Services:</strong> Gmail API for job application tracking (with consent)</li>
+                        <li><strong>Email Services:</strong> Gmail API for job application tracking (with explicit OAuth consent, complies with Google API Services User Data Policy)</li>
                         <li><strong>AI Services:</strong> Third-party AI providers for resume generation, analysis, and career assistance</li>
                         <li><strong>Job Data Providers:</strong> Third-party services for job listings and career data</li>
                       </ul>
+                      <div className="bg-purple-900/20 border border-purple-500/30 rounded-lg p-3 mt-3">
+                        <p className="text-gray-300 text-sm font-semibold mb-2">Google Services Compliance:</p>
+                        <p className="text-gray-300 text-xs">
+                          Our use of Google OAuth and Gmail API is subject to Google's API Services User Data Policy, including the Limited Use requirements. We only access Gmail data necessary for job application tracking, do not use it for advertising, and allow you to revoke access at any time.
+                        </p>
+                      </div>
                     </div>
 
                     <div className="bg-green-900/20 border border-green-500/30 rounded-lg p-4">
@@ -233,6 +251,16 @@ export default function PrivacyPolicyPage() {
                         <li>You control what information is shared and with whom</li>
                         <li>Gmail integration processes emails only for job tracking purposes</li>
                       </ul>
+                      <div className="bg-yellow-900/20 border border-yellow-500/30 rounded-lg p-3 mt-3">
+                        <p className="text-gray-300 text-sm font-semibold mb-2">Gmail Data Usage Restrictions (Google Compliance):</p>
+                        <ul className="list-disc list-inside text-gray-300 space-y-1 text-xs ml-4">
+                          <li>Gmail data is used solely for the purpose stated: automatic job application tracking</li>
+                          <li>Gmail data is NOT used for advertising, marketing, or any other purpose</li>
+                          <li>Gmail data is NOT transferred, sold, or shared with third parties except as necessary to provide the tracking service</li>
+                          <li>Gmail data access is limited to reading job-related emails only</li>
+                          <li>We comply with Google's Limited Use requirements for Gmail API</li>
+                        </ul>
+                      </div>
                     </div>
 
                     <div className="bg-red-900/20 border border-red-500/30 rounded-lg p-4">
@@ -315,6 +343,22 @@ export default function PrivacyPolicyPage() {
                         <li>Object to certain uses of your information</li>
                         <li>Request correction of inaccurate data</li>
                         <li>Limit processing for specific purposes</li>
+                      </ul>
+                    </div>
+
+                    <div className="bg-yellow-900/20 border border-yellow-500/30 rounded-lg p-4">
+                      <h3 className="text-xl font-semibold text-white mb-3">Gmail Data Control (Google Compliance):</h3>
+                      <p className="text-gray-300 text-sm mb-2">
+                        In compliance with Google's API Services User Data Policy and Limited Use requirements:
+                      </p>
+                      <ul className="list-disc list-inside text-gray-300 space-y-2 text-sm ml-4">
+                        <li>You can revoke Gmail access at any time through your BioCAN account settings</li>
+                        <li>You can also revoke access directly through your Google account settings</li>
+                        <li>Upon revocation, we will immediately stop accessing your Gmail data</li>
+                        <li>We will delete stored Gmail-related data within 30 days of revocation (except as required by law)</li>
+                        <li>Gmail data is only used for the stated purpose: automatic job application tracking</li>
+                        <li>Gmail data is never used for advertising or marketing purposes</li>
+                        <li>Gmail data is not transferred to third parties except as necessary to provide the tracking service</li>
                       </ul>
                     </div>
                   </div>

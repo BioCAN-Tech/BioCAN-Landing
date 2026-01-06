@@ -123,6 +123,24 @@ export default function TermsPage() {
                       The effectiveness of our AI recommendations depends on accurate information. Providing false information about your skills, experience, or career goals may result in irrelevant recommendations and potential account suspension.
                     </p>
                   </div>
+
+                  <div className="bg-blue-900/20 border border-blue-500/30 rounded-lg p-4 mt-4">
+                    <h3 className="text-xl font-semibold text-white mb-3">Google OAuth and Gmail API Access:</h3>
+                    <p className="text-gray-300 leading-relaxed mb-3">
+                      By using BioCAN's Job Tracker feature, you may choose to connect your Gmail account through Google OAuth. This connection allows us to automatically track your job applications by reading relevant emails.
+                    </p>
+                    <ul className="list-disc list-inside text-gray-300 space-y-2 ml-4 mb-3">
+                      <li>Gmail access is optional and requires your explicit consent through Google's OAuth consent screen</li>
+                      <li>We only access emails related to job applications for automatic tracking purposes</li>
+                      <li>Gmail data is not used for advertising, marketing, or any purpose other than job application tracking</li>
+                      <li>Gmail data is not transferred, sold, or shared with third parties except as necessary to provide the tracking service</li>
+                      <li>You can revoke Gmail access at any time through your account settings or Google account settings</li>
+                      <li>Our use of Gmail API complies with Google's API Services User Data Policy and Limited Use requirements</li>
+                    </ul>
+                    <p className="text-gray-300 text-sm italic">
+                      <strong>Important:</strong> By granting Gmail access, you acknowledge that you have read and understood our Privacy Policy and agree to our use of Gmail data solely for job application tracking as described.
+                    </p>
+                  </div>
                 </div>
 
                 {/* Payment Terms */}
@@ -159,11 +177,53 @@ export default function TermsPage() {
                   </div>
                 </div>
 
+                {/* Third-Party Services */}
+                <div>
+                  <div className="flex items-center space-x-3 mb-6">
+                    <Shield className="w-6 h-6 text-blue-400" />
+                    <h2 className="text-2xl font-bold text-white">6. Third-Party Services and Google Compliance</h2>
+                  </div>
+                  <p className="text-gray-300 leading-relaxed mb-4">
+                    BioCAN integrates with third-party services to provide enhanced functionality. Your use of these services is subject to their respective terms and conditions.
+                  </p>
+                  
+                  <div className="space-y-4">
+                    <div className="bg-blue-900/20 border border-blue-500/30 rounded-lg p-4">
+                      <h3 className="text-xl font-semibold text-white mb-3">Google Services:</h3>
+                      <ul className="list-disc list-inside text-gray-300 space-y-2 ml-4">
+                        <li><strong>Google OAuth:</strong> Used for secure authentication. Subject to Google's OAuth 2.0 policies.</li>
+                        <li><strong>Gmail API:</strong> Used for job application tracking (optional, requires consent). Subject to Google's API Services User Data Policy.</li>
+                        <li>Our use of Google services complies with Google's Limited Use disclosure requirements</li>
+                        <li>Gmail data access is limited to reading job-related emails only</li>
+                        <li>Gmail data is not used for advertising or transferred to third parties except as necessary for the service</li>
+                        <li>You maintain full control and can revoke access at any time</li>
+                      </ul>
+                    </div>
+
+                    <div className="bg-green-900/20 border border-green-500/30 rounded-lg p-4">
+                      <h3 className="text-xl font-semibold text-white mb-3">Payment Processing:</h3>
+                      <p className="text-gray-300 leading-relaxed">
+                        Payment processing is handled by Razorpay. Your payment information is processed securely and is subject to Razorpay's privacy policy and terms of service.
+                      </p>
+                    </div>
+
+                    <div className="bg-purple-900/20 border border-purple-500/30 rounded-lg p-4">
+                      <h3 className="text-xl font-semibold text-white mb-3">Third-Party Service Limitations:</h3>
+                      <p className="text-gray-300 leading-relaxed mb-2">
+                        BioCAN is not responsible for the availability, accuracy, or practices of third-party services. Your interactions with third-party services are solely between you and the third party.
+                      </p>
+                      <p className="text-gray-300 leading-relaxed">
+                        If you choose to revoke access to any third-party service (such as Gmail), certain features may become unavailable until access is restored.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
                 {/* Intellectual Property */}
                 <div>
                   <div className="flex items-center space-x-3 mb-6">
                     <Lock className="w-6 h-6 text-purple-400" />
-                    <h2 className="text-2xl font-bold text-white">6. Intellectual Property Rights</h2>
+                    <h2 className="text-2xl font-bold text-white">7. Intellectual Property Rights</h2>
                   </div>
                   <p className="text-gray-300 leading-relaxed mb-4">
                     BioCAN and its licensors own all intellectual property rights in the service, including:
@@ -183,7 +243,7 @@ export default function TermsPage() {
 
                 {/* Privacy and Data Protection */}
                 <div>
-                  <h2 className="text-2xl font-bold text-white mb-4">7. Privacy and Data Protection</h2>
+                  <h2 className="text-2xl font-bold text-white mb-4">8. Privacy and Data Protection</h2>
                   <p className="text-gray-300 leading-relaxed mb-4">
                     Your privacy is important to us. Our collection and use of personal information is governed by our Privacy Policy, which forms part of these terms.
                   </p>
@@ -205,7 +265,7 @@ export default function TermsPage() {
                 <div>
                   <div className="flex items-center space-x-3 mb-6">
                     <AlertTriangle className="w-6 h-6 text-red-400" />
-                    <h2 className="text-2xl font-bold text-white">8. User Conduct and Prohibited Activities</h2>
+                    <h2 className="text-2xl font-bold text-white">9. User Conduct and Prohibited Activities</h2>
                   </div>
                   
                   <h3 className="text-xl font-semibold text-white mb-3">Prohibited Activities:</h3>
@@ -230,7 +290,7 @@ export default function TermsPage() {
 
                 {/* Disclaimers */}
                 <div>
-                  <h2 className="text-2xl font-bold text-white mb-4">9. Disclaimers and Limitations</h2>
+                  <h2 className="text-2xl font-bold text-white mb-4">10. Disclaimers and Limitations</h2>
                   <div className="space-y-4">
                     <div className="bg-yellow-900/20 border border-yellow-500/30 rounded-lg p-4">
                       <p className="text-gray-300 leading-relaxed">
@@ -254,7 +314,7 @@ export default function TermsPage() {
                 <div>
                   <div className="flex items-center space-x-3 mb-6">
                     <XCircle className="w-6 h-6 text-red-400" />
-                    <h2 className="text-2xl font-bold text-white">10. Termination</h2>
+                    <h2 className="text-2xl font-bold text-white">11. Termination</h2>
                   </div>
                   <p className="text-gray-300 leading-relaxed mb-4">
                     You may terminate your account at any time by contacting support. We may terminate accounts for violations of these terms.
@@ -272,7 +332,7 @@ export default function TermsPage() {
                 <div>
                   <div className="flex items-center space-x-3 mb-6">
                     <FileX className="w-6 h-6 text-blue-400" />
-                    <h2 className="text-2xl font-bold text-white">11. Changes to Terms</h2>
+                    <h2 className="text-2xl font-bold text-white">12. Changes to Terms</h2>
                   </div>
                   <p className="text-gray-300 leading-relaxed">
                     We reserve the right to modify these terms at any time. Users will be notified of significant changes via email or platform notification. Continued use after changes constitutes acceptance of new terms.
@@ -283,7 +343,7 @@ export default function TermsPage() {
                 <div>
                   <div className="flex items-center space-x-3 mb-6">
                     <Phone className="w-6 h-6 text-green-400" />
-                    <h2 className="text-2xl font-bold text-white">12. Contact Information</h2>
+                    <h2 className="text-2xl font-bold text-white">13. Contact Information</h2>
                   </div>
                   <p className="text-gray-300 leading-relaxed">
                     For questions about these Terms and Conditions, please contact us:
