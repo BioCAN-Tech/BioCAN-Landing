@@ -99,7 +99,7 @@ jobs:
           ssh -o StrictHostKeyChecking=accept-new -o ConnectTimeout=30 "$EC2_USERNAME@$EC2_HOST" "EC2_USERNAME='$EC2_USERNAME' bash -s" <<'EOF'
           set -euo pipefail
 
-          APACHE_ROOT="/opt/bitnami/apache2/htdocs"
+          APACHE_ROOT="/opt/bitnami/apache/htdocs"
           TEMP_DIR="/home/${EC2_USERNAME}/htdocs-temp"
           BACKUPS_DIR="/home/${EC2_USERNAME}/htdocs-backups"
           TIMESTAMP="$(date +%Y%m%d-%H%M%S)"
@@ -135,6 +135,6 @@ jobs:
         run: |
           echo "✅ Landing page deployed successfully!"
           echo "🌐 Live at: https://biocan.ai and https://www.biocan.ai"
-          echo "📁 Deployed to: /opt/bitnami/apache2/htdocs"
+          echo "📁 Deployed to: /opt/bitnami/apache/htdocs"
           echo "🔒 Your app.biocan.ai (WebAppReact) was NOT touched - completely safe!"
 
