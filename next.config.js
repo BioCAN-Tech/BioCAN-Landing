@@ -3,6 +3,8 @@ const nextConfig = {
   // Use 'export' for static site generation (Apache deployment)
   // Use 'standalone' for containerized deployments (uncomment if needed)
   output: process.env.NEXT_EXPORT === 'true' ? 'export' : 'standalone',
+  // Ensure trailing slashes are handled correctly for static export
+  trailingSlash: process.env.NEXT_EXPORT === 'true' ? false : false,
   experimental: {
     optimizePackageImports: ['lucide-react', 'framer-motion']
   },
