@@ -31,7 +31,7 @@ export default function PrivacyPolicyPage() {
           <div className="glass-card p-8 md:p-12 rounded-2xl">
             <div className="prose prose-invert max-w-none">
               <p className="text-gray-300 mb-8">
-                <strong>Last updated:</strong> 01/09/2025
+                <strong>Last updated:</strong> 01/Jan/2026
               </p>
 
               <div className="space-y-8">
@@ -74,6 +74,8 @@ export default function PrivacyPolicyPage() {
                         <li><strong>Skills Evaluation:</strong> Self-reported skills and AI-analyzed competencies</li>
                         <li><strong>Career Preferences:</strong> Job interests, industry preferences, salary expectations</li>
                         <li><strong>Learning Progress:</strong> Course completions, skill development tracking</li>
+                        <li><strong>Job Application Data:</strong> Companies, positions, application dates, status updates</li>
+                        <li><strong>Resume Content:</strong> Education, experience, skills, certifications, projects</li>
                       </ul>
                     </div>
                   </div>
@@ -86,6 +88,9 @@ export default function PrivacyPolicyPage() {
                         <li><strong>Search Data:</strong> Job searches, AI chat conversations, content preferences</li>
                         <li><strong>Device Information:</strong> Browser type, device type, IP address</li>
                         <li><strong>Performance Data:</strong> Page load times, error reports, feature usage</li>
+                        <li><strong>Automation Data:</strong> Form filling patterns, application success rates</li>
+                        <li><strong>Wallet Transactions:</strong> Subscription purchases, top-ups, usage credits</li>
+                        <li><strong>Referral Activity:</strong> Referral codes shared, sign-ups generated, rewards earned</li>
                       </ul>
                     </div>
 
@@ -95,8 +100,22 @@ export default function PrivacyPolicyPage() {
                         <li><strong>Chat History:</strong> Conversations with our AI career assistant</li>
                         <li><strong>Recommendation Feedback:</strong> Ratings and responses to job suggestions</li>
                         <li><strong>Learning Patterns:</strong> How you interact with our AI-powered features</li>
+                        <li><strong>Resume Generation Data:</strong> AI-generated resume versions and edits</li>
+                        <li><strong>Email Processing:</strong> Job-related email content processed for tracking (with consent)</li>
                       </ul>
                     </div>
+                  </div>
+
+                  <div className="bg-yellow-900/20 border border-yellow-500/30 rounded-lg p-4 mt-6">
+                    <h3 className="text-xl font-semibold text-white mb-3">2.5 Third-Party Integration Data</h3>
+                    <ul className="list-disc list-inside text-gray-300 space-y-2 text-sm ml-4">
+                      <li><strong>Gmail Data:</strong> Email content related to job applications (only with explicit OAuth consent)</li>
+                      <li><strong>Payment Gateway Data:</strong> Transaction IDs, payment status (processed securely, not stored)</li>
+                      <li><strong>OAuth Tokens:</strong> Encrypted tokens for Gmail access (stored securely)</li>
+                    </ul>
+                    <p className="text-gray-300 text-sm mt-3">
+                      <strong>Important:</strong> We only access third-party data with your explicit consent. You can revoke access at any time through your account settings or the third-party service.
+                    </p>
                   </div>
                 </div>
 
@@ -117,6 +136,12 @@ export default function PrivacyPolicyPage() {
                         <li>Enable AI-powered career chat assistance</li>
                         <li>Facilitate interview preparation tools</li>
                         <li>Match you with relevant opportunities</li>
+                        <li>Track job applications automatically via Gmail integration</li>
+                        <li>Generate and optimize resumes using AI</li>
+                        <li>Automate job application form filling</li>
+                        <li>Provide daily career insights and happenings</li>
+                        <li>Manage wallet credits</li>
+                        <li>Process referral program rewards</li>
                       </ul>
                     </div>
 
@@ -192,9 +217,12 @@ export default function PrivacyPolicyPage() {
                       <h3 className="text-xl font-semibold text-white mb-3">Service Providers:</h3>
                       <ul className="list-disc list-inside text-gray-300 space-y-2 ml-4">
                         <li><strong>Authentication:</strong> Google OAuth for secure login</li>
-                        <li><strong>Payment Processing:</strong> Razorpay for subscription payments</li>
+                        <li><strong>Payment Processing:</strong> Razorpay for secure payment processing</li>
                         <li><strong>Cloud Infrastructure:</strong> Secure hosting and data storage</li>
                         <li><strong>Analytics:</strong> Usage analytics for platform improvement</li>
+                        <li><strong>Email Services:</strong> Gmail API for job application tracking (with consent)</li>
+                        <li><strong>AI Services:</strong> OpenAI, Perplexity, and other AI providers for resume generation and analysis</li>
+                        <li><strong>Job Data Providers:</strong> BrightData, ScrapingDog for job listings</li>
                       </ul>
                     </div>
 
@@ -203,7 +231,9 @@ export default function PrivacyPolicyPage() {
                       <ul className="list-disc list-inside text-gray-300 space-y-2 ml-4">
                         <li>With your explicit consent, we may share your profile with potential employers</li>
                         <li>Job application services require sharing relevant professional information</li>
+                        <li>Automated application features may submit your resume and profile data to employers</li>
                         <li>You control what information is shared and with whom</li>
+                        <li>Gmail integration processes emails only for job tracking purposes</li>
                       </ul>
                     </div>
 
@@ -307,6 +337,11 @@ export default function PrivacyPolicyPage() {
                     <li><strong>Assessment Results:</strong> Retained to track career progress (deletable on request)</li>
                     <li><strong>AI Chat History:</strong> Retained for 1 year unless deleted earlier</li>
                     <li><strong>Financial Records:</strong> Retained for 7 years for legal compliance</li>
+                    <li><strong>Job Application Data:</strong> Retained while account is active, deleted upon account closure</li>
+                    <li><strong>Resume Data:</strong> Retained for resume history and regeneration (deletable on request)</li>
+                    <li><strong>Gmail Integration:</strong> Email data processed in real-time, not stored long-term</li>
+                    <li><strong>Wallet Transactions:</strong> Retained for 7 years for financial compliance</li>
+                    <li><strong>Referral Data:</strong> Retained for program administration and reward processing</li>
                   </ul>
                   <p className="text-gray-300 leading-relaxed">
                     Upon account deletion, most data is removed immediately, with some anonymized data retained for service improvement.
@@ -363,7 +398,9 @@ export default function PrivacyPolicyPage() {
                     <br /><br />
                     Email: team.biocan@gmail.com
                     <br />
-                    Support: support@biocan.ai
+                    Support: arjun@biocan.ai
+                    <br />
+                    Phone: +91 9044404142
                     <br /><br />
                     <strong>Note:</strong> We are committed to responding to privacy requests within 30 days. For urgent matters, please mark your email as "Urgent Privacy Request."
                   </p>

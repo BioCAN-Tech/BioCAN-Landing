@@ -31,7 +31,7 @@ export default function TermsPage() {
           <div className="glass-card p-8 md:p-12 rounded-2xl">
             <div className="prose prose-invert max-w-none">
               <p className="text-gray-300 mb-8">
-                <strong>Last updated:</strong> 01/09/2025
+                <strong>Last updated:</strong> 01/Jan/2026
               </p>
 
               <div className="space-y-8">
@@ -66,6 +66,12 @@ export default function TermsPage() {
                       <li>Using interview preparation tools</li>
                       <li>Utilizing our AI career chat service</li>
                       <li>Building and optimizing your professional profile</li>
+                      <li>Tracking job applications with our Job Tracker</li>
+                      <li>Building and editing resumes with AI-powered Resume Builder</li>
+                      <li>Automated job application with form filling</li>
+                      <li>Connecting Gmail for automatic application tracking</li>
+                      <li>Daily career insights and happenings</li>
+                      <li>Referral program participation</li>
                     </ul>
                   </div>
                   <p className="text-gray-300 leading-relaxed mb-4">
@@ -83,6 +89,10 @@ export default function TermsPage() {
                       <li>Share premium content or features with non-subscribers</li>
                       <li>Create fake profiles or manipulate assessment results</li>
                       <li>Use automated tools to scrape job recommendations or content</li>
+                      <li>Abuse the automation features for spam or fraudulent applications</li>
+                      <li>Share or sell access to your account or referral codes</li>
+                      <li>Use wallet credits for unauthorized purposes</li>
+                      <li>Manipulate referral system for fraudulent rewards</li>
                     </ul>
                   </div>
                 </div>
@@ -106,7 +116,10 @@ export default function TermsPage() {
                         <li>Skill gap analysis and roadmaps</li>
                         <li>Interview preparation and practice</li>
                         <li>Resume optimization tools</li>
-                        <li>Industry networking opportunities</li>
+                        <li>Job Application Tracker with Gmail integration</li>
+                        <li>AI-powered Resume Builder and Editor</li>
+                        <li>Automated job application with form filling</li>
+                        <li>Daily career insights (Happenings)</li>
                       </ul>
                     </div>
                     
@@ -114,11 +127,11 @@ export default function TermsPage() {
                       <h3 className="text-xl font-semibold text-white mb-3">Premium Features:</h3>
                       <ul className="list-disc list-inside text-gray-300 space-y-2 ml-4">
                         <li>Advanced AI career coaching</li>
-                        <li>Direct job application services</li>
                         <li>Priority support and guidance</li>
                         <li>Exclusive industry insights</li>
-                        <li>Custom career journey planning</li>
                         <li>Professional development tracking</li>
+                        <li>Digital wallet with subscription packages</li>
+                        <li>Referral program with rewards</li>
                       </ul>
                     </div>
                   </div>
@@ -166,18 +179,23 @@ export default function TermsPage() {
                   <div className="bg-green-900/20 border border-green-500/30 rounded-lg p-4 mb-4">
                     <h3 className="text-xl font-semibold text-white mb-3">Payment Terms:</h3>
                     <ul className="list-disc list-inside text-gray-300 space-y-2 ml-4">
-                      <li>One-time payment of ₹99 INR for premium access</li>
+                      <li>BioCAN uses a credit-based system for premium features</li>
+                      <li>You can sign up and explore features for free</li>
+                      <li>Credits are required to use premium features</li>
                       <li>All payments are processed securely through Razorpay</li>
                       <li>Prices are subject to change with 30 days notice</li>
-                      <li>Premium features are activated immediately upon payment</li>
-                      <li>No recurring billing or auto-renewal</li>
+                      <li>Credits are activated immediately upon purchase</li>
+                      <li>Credits do not expire</li>
                     </ul>
                   </div>
                   
                   <div className="bg-blue-900/20 border border-blue-500/30 rounded-lg p-4">
                     <h3 className="text-xl font-semibold text-white mb-3">Payment Processing:</h3>
+                    <p className="text-gray-300 leading-relaxed mb-3">
+                      We use Razorpay for secure payment processing. Credits can be purchased as needed. By providing payment information, you represent that you are authorized to use the payment method and authorize us to charge accordingly.
+                    </p>
                     <p className="text-gray-300 leading-relaxed">
-                      We use Razorpay for secure payment processing. The one-time premium access fee is ₹99 INR. By providing payment information, you represent that you are authorized to use the payment method and authorize us to charge the one-time fee.
+                      <strong>Important:</strong> All sales are final. BioCAN does not offer refunds for purchased credits. Please review our Cancellation & Refund Policy for details.
                     </p>
                   </div>
                 </div>
@@ -216,6 +234,11 @@ export default function TermsPage() {
                     <li>Usage patterns to improve our AI algorithms</li>
                     <li>Professional information for job matching</li>
                     <li>Communication preferences for service updates</li>
+                    <li>Gmail data (with your explicit consent) for automatic job tracking</li>
+                    <li>Resume content for AI-powered optimization and generation</li>
+                    <li>Job application data for tracking and analytics</li>
+                    <li>Wallet transaction data for subscription management</li>
+                    <li>Referral data for program administration</li>
                   </ul>
                 </div>
 
@@ -235,9 +258,14 @@ export default function TermsPage() {
                     <li>Sharing account access with others</li>
                     <li>Uploading malicious content or viruses</li>
                     <li>Interfering with platform operations</li>
+                    <li>Using automation features for spam or fraudulent job applications</li>
+                    <li>Manipulating the referral system for unauthorized rewards</li>
+                    <li>Abusing Gmail integration to access unauthorized email accounts</li>
+                    <li>Using resume generation for fraudulent purposes</li>
+                    <li>Circumventing payment systems or subscription limitations</li>
                   </ul>
-                  <p className="text-gray-300 leading-relaxed">
-                    Violation of these terms may result in account suspension or termination without refund.
+                    <p className="text-gray-300 leading-relaxed">
+                    Violation of these terms may result in account suspension or termination without refund. All purchased credits are non-refundable.
                   </p>
                 </div>
 
@@ -276,7 +304,7 @@ export default function TermsPage() {
                   <ul className="list-disc list-inside text-gray-300 space-y-2 ml-4">
                     <li>Access to premium features will cease immediately</li>
                     <li>Your data will be handled according to our Privacy Policy</li>
-                    <li>No refunds will be provided for the one-time premium access fee</li>
+                    <li>No refunds will be provided for purchased credits</li>
                     <li>You may request data export within 30 days</li>
                   </ul>
                 </div>
@@ -303,7 +331,9 @@ export default function TermsPage() {
                     <br /><br />
                     Email: team.biocan@gmail.com
                     <br />
-                    Support: support@biocan.ai
+                    Support: arjun@biocan.ai
+                    <br />
+                    Phone: +91 9044404142
                   </p>
                 </div>
               </div>

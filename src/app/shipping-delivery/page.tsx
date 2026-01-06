@@ -31,7 +31,7 @@ export default function ShippingDeliveryPage() {
           <div className="glass-card p-8 md:p-12 rounded-2xl">
             <div className="prose prose-invert max-w-none">
               <p className="text-gray-300 mb-8">
-                <strong>Last updated:</strong> 01/09/2025
+                <strong>Last updated:</strong> 01/Jan/2026
               </p>
 
               <div className="space-y-8">
@@ -78,9 +78,8 @@ export default function ShippingDeliveryPage() {
                       </h3>
                       <ul className="list-disc list-inside text-gray-300 space-y-2 ml-4">
                         <li><strong>Account Creation:</strong> Immediate access upon Google OAuth sign-in</li>
-                        <li><strong>Basic Assessments:</strong> Available immediately after registration</li>
-                        <li><strong>Career Exploration:</strong> Basic job recommendations start right away</li>
                         <li><strong>Profile Building:</strong> Begin creating your professional profile instantly</li>
+                        <li><strong>Feature Exploration:</strong> Browse and explore available features</li>
                       </ul>
                     </div>
 
@@ -90,9 +89,8 @@ export default function ShippingDeliveryPage() {
                         Premium Services:
                       </h3>
                       <ul className="list-disc list-inside text-gray-300 space-y-2 ml-4">
-                        <li><strong>Payment Confirmation:</strong> Services activate within seconds of successful Razorpay payment</li>
-                        <li><strong>AI Features:</strong> Advanced career coaching available immediately</li>
-                        <li><strong>Premium Content:</strong> Full access to skill roadmaps and industry insights</li>
+                        <li><strong>Credit Purchase:</strong> Credits activate within seconds of successful Razorpay payment</li>
+                        <li><strong>Premium Features:</strong> Full access to premium features with credits</li>
                         <li><strong>Priority Support:</strong> Enhanced support features activate instantly</li>
                       </ul>
                     </div>
@@ -103,27 +101,19 @@ export default function ShippingDeliveryPage() {
                 <div>
                   <h2 className="text-2xl font-bold text-white mb-6">3. Digital Service Components</h2>
 
-                  <h3 className="text-xl font-semibold text-white mb-4">Core Platform Services:</h3>
+                  <h3 className="text-xl font-semibold text-white mb-4">Platform Services:</h3>
                   <div className="bg-gray-800/50 border border-gray-700 rounded-lg p-4 mb-6">
                     <ul className="list-disc list-inside text-gray-300 space-y-2 ml-4">
                       <li>AI-powered career assessments (MBTI, skills evaluation)</li>
                       <li>Personalized job recommendations engine</li>
                       <li>Interactive skill development roadmaps</li>
                       <li>AI career chat assistant</li>
-                      <li>Professional profile optimization tools</li>
-                      <li>Interview preparation modules</li>
-                    </ul>
-                  </div>
-
-                  <h3 className="text-xl font-semibold text-white mb-4">Premium Add-ons:</h3>
-                  <div className="bg-gradient-to-r from-purple-900/30 to-blue-900/30 border border-purple-500/30 rounded-lg p-4 mb-6">
-                    <ul className="list-disc list-inside text-gray-300 space-y-2 ml-4">
-                      <li>Advanced AI coaching sessions</li>
-                      <li>Direct job application services</li>
-                      <li>Industry networking opportunities</li>
+                      <li>Job Application Tracker with Gmail integration</li>
+                      <li>AI-powered Resume Builder and Editor</li>
+                      <li>Automated job application with form filling</li>
+                      <li>Daily career insights (Happenings)</li>
                       <li>Exclusive career insights and reports</li>
-                      <li>Priority customer support</li>
-                      <li>Custom career journey planning</li>
+                      <li>Referral program with rewards</li>
                     </ul>
                   </div>
 
@@ -180,7 +170,6 @@ export default function ShippingDeliveryPage() {
                     <li><strong>Primary Markets:</strong> India, Southeast Asia, Middle East</li>
                     <li><strong>Global Access:</strong> Available worldwide with English language support</li>
                     <li><strong>Time Zones:</strong> Platform operates 24/7 across all time zones</li>
-                    <li><strong>Localization:</strong> Content optimized for biotechnology markets globally</li>
                   </ul>
                 </div>
 
@@ -252,8 +241,6 @@ export default function ShippingDeliveryPage() {
                   <div className="bg-purple-900/20 border border-purple-500/30 rounded-lg p-4 mb-6">
                     <h4 className="font-semibold text-white mb-3">Automatic Updates:</h4>
                     <ul className="list-disc list-inside text-gray-300 space-y-2 ml-4">
-                      <li>New job listings added daily</li>
-                      <li>Industry insights updated weekly</li>
                       <li>AI algorithms continuously improved</li>
                       <li>Platform features enhanced regularly</li>
                     </ul>
@@ -343,26 +330,14 @@ export default function ShippingDeliveryPage() {
                     Since our services are digital, most issues can be resolved quickly through our support channels:
                   </p>
 
-                  <div className="grid md:grid-cols-2 gap-6 mb-6">
-                    <div className="bg-blue-900/20 border border-blue-500/30 rounded-lg p-4">
-                      <h4 className="font-semibold text-white mb-3">Self-Service Options:</h4>
-                      <ul className="list-disc list-inside text-gray-300 space-y-2 text-sm ml-4">
-                        <li>In-platform help documentation</li>
-                        <li>Video tutorials and guides</li>
-                        <li>FAQ section with common solutions</li>
-                        <li>AI chat assistant for instant help</li>
-                      </ul>
-                    </div>
-                    
-                    <div className="bg-green-900/20 border border-green-500/30 rounded-lg p-4">
-                      <h4 className="font-semibold text-white mb-3">Direct Support:</h4>
-                      <ul className="list-disc list-inside text-gray-300 space-y-2 text-sm ml-4">
-                        <li>Email support: support@biocan.ai</li>
-                        <li>Response time: 24-48 hours</li>
-                        <li>Priority support for premium users</li>
-                        <li>Technical troubleshooting assistance</li>
-                      </ul>
-                    </div>
+                  <div className="bg-green-900/20 border border-green-500/30 rounded-lg p-4">
+                    <h4 className="font-semibold text-white mb-3">Direct Support:</h4>
+                    <ul className="list-disc list-inside text-gray-300 space-y-2 text-sm ml-4">
+                      <li>Email support: arjun@biocan.ai</li>
+                      <li>Phone: +91 9044404142</li>
+                      <li>Response time: 24-48 hours</li>
+                      <li>Technical troubleshooting assistance</li>
+                    </ul>
                   </div>
                 </div>
 
@@ -370,11 +345,13 @@ export default function ShippingDeliveryPage() {
                 <div>
                   <h2 className="text-2xl font-bold text-white mb-4">9. Contact Information</h2>
                   <p className="text-gray-300 leading-relaxed">
-                    For questions about these Terms and Conditions, please contact us:
+                    For questions about service delivery, please contact us:
                     <br /><br />
                     Email: team.biocan@gmail.com
                     <br />
-                    Support: support@biocan.ai
+                    Support: arjun@biocan.ai
+                    <br />
+                    Phone: +91 9044404142
                   </p>
                 </div>
               </div>
