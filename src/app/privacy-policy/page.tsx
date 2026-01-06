@@ -134,8 +134,6 @@ export default function PrivacyPolicyPage() {
                         <li>Generate career assessment reports</li>
                         <li>Create customized skill development roadmaps</li>
                         <li>Enable AI-powered career chat assistance</li>
-                        <li>Facilitate interview preparation tools</li>
-                        <li>Match you with relevant opportunities</li>
                         <li>Track job applications automatically via Gmail integration</li>
                         <li>Generate and optimize resumes using AI</li>
                         <li>Automate job application form filling</li>
@@ -221,8 +219,8 @@ export default function PrivacyPolicyPage() {
                         <li><strong>Cloud Infrastructure:</strong> Secure hosting and data storage</li>
                         <li><strong>Analytics:</strong> Usage analytics for platform improvement</li>
                         <li><strong>Email Services:</strong> Gmail API for job application tracking (with consent)</li>
-                        <li><strong>AI Services:</strong> OpenAI, Perplexity, and other AI providers for resume generation and analysis</li>
-                        <li><strong>Job Data Providers:</strong> BrightData, ScrapingDog for job listings</li>
+                        <li><strong>AI Services:</strong> Third-party AI providers for resume generation, analysis, and career assistance</li>
+                        <li><strong>Job Data Providers:</strong> Third-party services for job listings and career data</li>
                       </ul>
                     </div>
 
@@ -396,7 +394,7 @@ export default function PrivacyPolicyPage() {
                   <p className="text-gray-300 leading-relaxed">
                     For questions about this Privacy Policy or to exercise your privacy rights, contact us:
                     <br /><br />
-                    Email: team.biocan@gmail.com
+                    Email: tech.biocan@gmail.com
                     <br />
                     Support: arjun@biocan.ai
                     <br />

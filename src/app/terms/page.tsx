@@ -65,7 +65,6 @@ export default function TermsPage() {
                       <li>Accessing skill development roadmaps</li>
                       <li>Using interview preparation tools</li>
                       <li>Utilizing our AI career chat service</li>
-                      <li>Building and optimizing your professional profile</li>
                       <li>Tracking job applications with our Job Tracker</li>
                       <li>Building and editing resumes with AI-powered Resume Builder</li>
                       <li>Automated job application with form filling</li>
@@ -97,46 +96,6 @@ export default function TermsPage() {
                   </div>
                 </div>
 
-                {/* Service Description */}
-                <div>
-                  <div className="flex items-center space-x-3 mb-6">
-                    <Shield className="w-6 h-6 text-purple-400" />
-                    <h2 className="text-2xl font-bold text-white">3. Service Description</h2>
-                  </div>
-                  <p className="text-gray-300 leading-relaxed mb-4">
-                    BioCAN provides a comprehensive career advancement platform specifically designed for biotechnology and life sciences professionals, offering:
-                  </p>
-                  
-                  <div className="grid md:grid-cols-2 gap-6 mb-4">
-                    <div className="bg-blue-900/20 border border-blue-500/30 rounded-lg p-4">
-                      <h3 className="text-xl font-semibold text-white mb-3">Core Services:</h3>
-                      <ul className="list-disc list-inside text-gray-300 space-y-2 ml-4">
-                        <li>AI-powered career assessments</li>
-                        <li>Personalized job recommendations</li>
-                        <li>Skill gap analysis and roadmaps</li>
-                        <li>Interview preparation and practice</li>
-                        <li>Resume optimization tools</li>
-                        <li>Job Application Tracker with Gmail integration</li>
-                        <li>AI-powered Resume Builder and Editor</li>
-                        <li>Automated job application with form filling</li>
-                        <li>Daily career insights (Happenings)</li>
-                      </ul>
-                    </div>
-                    
-                    <div className="bg-purple-900/20 border border-purple-500/30 rounded-lg p-4">
-                      <h3 className="text-xl font-semibold text-white mb-3">Premium Features:</h3>
-                      <ul className="list-disc list-inside text-gray-300 space-y-2 ml-4">
-                        <li>Advanced AI career coaching</li>
-                        <li>Priority support and guidance</li>
-                        <li>Exclusive industry insights</li>
-                        <li>Professional development tracking</li>
-                        <li>Digital wallet with subscription packages</li>
-                        <li>Referral program with rewards</li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-
                 {/* Account Registration */}
                 <div>
                   <div className="flex items-center space-x-3 mb-6">
@@ -144,7 +103,7 @@ export default function TermsPage() {
                     <h2 className="text-2xl font-bold text-white">4. Account Registration and Responsibilities</h2>
                   </div>
                   <p className="text-gray-300 leading-relaxed mb-4">
-                    To access our full range of services, you must create an account using Google authentication or other approved methods.
+                    To access our full range of services, you must create an account using Google authentication.
                   </p>
                   
                   <div className="bg-gray-800/50 border border-gray-700 rounded-lg p-4 mb-4">
@@ -173,19 +132,19 @@ export default function TermsPage() {
                     <h2 className="text-2xl font-bold text-white">5. Payment Terms and Subscription</h2>
                   </div>
                   <p className="text-gray-300 leading-relaxed mb-4">
-                    BioCAN offers both free and premium subscription services. Premium features require payment processed through Razorpay.
+                    BioCAN operates on an annual subscription model with credits included. Premium features require subscription processed through Razorpay.
                   </p>
                   
                   <div className="bg-green-900/20 border border-green-500/30 rounded-lg p-4 mb-4">
                     <h3 className="text-xl font-semibold text-white mb-3">Payment Terms:</h3>
                     <ul className="list-disc list-inside text-gray-300 space-y-2 ml-4">
-                      <li>BioCAN uses a credit-based system for premium features</li>
+                      <li>BioCAN uses annual subscription packages with credits included</li>
                       <li>You can sign up and explore features for free</li>
-                      <li>Credits are required to use premium features</li>
+                      <li>Credits are included with subscription packages</li>
                       <li>All payments are processed securely through Razorpay</li>
                       <li>Prices are subject to change with 30 days notice</li>
-                      <li>Credits are activated immediately upon purchase</li>
-                      <li>Credits do not expire</li>
+                      <li>Credits are activated immediately upon subscription purchase</li>
+                      <li>Unused credits expire when your subscription expires</li>
                     </ul>
                   </div>
                   
@@ -329,7 +288,7 @@ export default function TermsPage() {
                   <p className="text-gray-300 leading-relaxed">
                     For questions about these Terms and Conditions, please contact us:
                     <br /><br />
-                    Email: team.biocan@gmail.com
+                    Email: tech.biocan@gmail.com
                     <br />
                     Support: arjun@biocan.ai
                     <br />

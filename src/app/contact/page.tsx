@@ -73,7 +73,7 @@ export default function ContactPage() {
                   </div>
                   <div>
                     <h3 className="text-lg font-semibold text-white mb-1">Email</h3>
-                    <p className="text-gray-300">team.biocan@gmail.com</p>
+                    <p className="text-gray-300">tech.biocan@gmail.com</p>
                     <p className="text-gray-300">arjun@biocan.ai</p>
                     <p className="text-sm text-gray-400 mt-1">We typically respond within 24 hours</p>
                   </div>

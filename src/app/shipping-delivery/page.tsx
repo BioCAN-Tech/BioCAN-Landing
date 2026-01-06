@@ -347,7 +347,7 @@ export default function ShippingDeliveryPage() {
                   <p className="text-gray-300 leading-relaxed">
                     For questions about service delivery, please contact us:
                     <br /><br />
-                    Email: team.biocan@gmail.com
+                    Email: tech.biocan@gmail.com
                     <br />
                     Support: arjun@biocan.ai
                     <br />
