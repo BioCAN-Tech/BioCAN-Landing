@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import NavigationProvider from '@/components/providers/navigation-provider'
 
 const inter = Inter({ 
   subsets: ['latin'],
@@ -64,7 +65,10 @@ export default function RootLayout({ children }: RootLayoutProps) {
             <div className="absolute bottom-0 left-1/3 w-72 h-72 bg-pink-500/20 rounded-full mix-blend-multiply filter blur-xl animate-float" style={{ animationDelay: '4s' }} />
           </div>
           
-          {children}
+          {/* Navigation Provider - Handles loading states during navigation */}
+          <NavigationProvider>
+            {children}
+          </NavigationProvider>
         </div>
       </body>
     </html>
