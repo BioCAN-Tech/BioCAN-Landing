@@ -150,7 +150,7 @@ export default function TermsPage() {
                     <h2 className="text-2xl font-bold text-white">5. Payment Terms and Subscription</h2>
                   </div>
                   <p className="text-gray-300 leading-relaxed mb-4">
-                    BioCAN operates on an annual subscription model with credits included. Premium features require subscription processed through Razorpay.
+                    BioCAN operates on an annual subscription model with credits included. Premium features require subscription processed through Cashfree.
                   </p>
                   
                   <div className="bg-green-900/20 border border-green-500/30 rounded-lg p-4 mb-4">
@@ -159,7 +159,7 @@ export default function TermsPage() {
                       <li>BioCAN uses annual subscription packages with credits included</li>
                       <li>You can sign up and explore features for free</li>
                       <li>Credits are included with subscription packages</li>
-                      <li>All payments are processed securely through Razorpay</li>
+                      <li>All payments are processed securely through Cashfree</li>
                       <li>Prices are subject to change with 30 days notice</li>
                       <li>Credits are activated immediately upon subscription purchase</li>
                       <li>Unused credits expire when your subscription expires</li>
@@ -169,7 +169,7 @@ export default function TermsPage() {
                   <div className="bg-blue-900/20 border border-blue-500/30 rounded-lg p-4">
                     <h3 className="text-xl font-semibold text-white mb-3">Payment Processing:</h3>
                     <p className="text-gray-300 leading-relaxed mb-3">
-                      We use Razorpay for secure payment processing. Credits can be purchased as needed. By providing payment information, you represent that you are authorized to use the payment method and authorize us to charge accordingly.
+                      We use Cashfree for secure payment processing. Credits can be purchased as needed. By providing payment information, you represent that you are authorized to use the payment method and authorize us to charge accordingly.
                     </p>
                     <p className="text-gray-300 leading-relaxed">
                       <strong>Important:</strong> All sales are final. BioCAN does not offer refunds for purchased credits. Please review our Cancellation & Refund Policy for details.
@@ -203,7 +203,7 @@ export default function TermsPage() {
                     <div className="bg-green-900/20 border border-green-500/30 rounded-lg p-4">
                       <h3 className="text-xl font-semibold text-white mb-3">Payment Processing:</h3>
                       <p className="text-gray-300 leading-relaxed">
-                        Payment processing is handled by Razorpay. Your payment information is processed securely and is subject to Razorpay's privacy policy and terms of service.
+                        Payment processing is handled by Cashfree. Your payment information is processed securely and is subject to Cashfree's privacy policy and terms of service.
                       </p>
                     </div>
 

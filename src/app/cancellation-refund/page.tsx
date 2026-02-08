@@ -54,6 +54,14 @@ export default function CancellationRefundPage() {
                   </div>
                   
                   <h3 className="text-xl font-semibold text-white mb-4">Available Plans:</h3>
+                  <div className="bg-purple-900/20 border border-purple-500/30 rounded-lg p-4 mb-6">
+                    <p className="text-gray-300 leading-relaxed mb-3">
+                      BioCAN offers flexible annual subscription packages with credits included. All pricing is in Indian Rupees (INR - ₹).
+                    </p>
+                    <p className="text-gray-300 text-sm">
+                      <strong>For current pricing and subscription plans:</strong> Visit <a href="https://app.biocan.ai/pricing" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300 underline">app.biocan.ai/pricing</a> or contact our support team.
+                    </p>
+                  </div>
                   
                   <h3 className="text-xl font-semibold text-white mb-4">Payment Information:</h3>
                   <div className="bg-green-900/20 border border-green-500/30 rounded-lg p-4">
@@ -61,7 +69,7 @@ export default function CancellationRefundPage() {
                       <li>BioCAN uses annual subscription packages with credits</li>
                       <li>You can sign up and explore features for free</li>
                       <li>Credits are included with subscription packages</li>
-                      <li>Payments are processed securely through Razorpay</li>
+                      <li>Payments are processed securely through Cashfree</li>
                       <li>Unused credits expire when your subscription expires</li>
                       <li>Prices displayed in Indian Rupees (INR)</li>
                     </ul>
@@ -260,7 +268,7 @@ export default function CancellationRefundPage() {
                   <div className="bg-gray-800/50 border border-gray-700 rounded-lg p-4 mb-4">
                     <ul className="list-disc list-inside text-gray-300 space-y-2 ml-4">
                       <li><strong>Account Details:</strong> Your BioCAN ID or registered email</li>
-                      <li><strong>Transaction ID:</strong> Razorpay payment ID or order number</li>
+                      <li><strong>Transaction ID:</strong> Cashfree payment ID or order number</li>
                       <li><strong>Purchase Date and Time:</strong> Exact timestamp of the transaction</li>
                       <li><strong>Issue Description:</strong> Detailed explanation of the technical or billing problem</li>
                       <li><strong>Supporting Evidence:</strong> Screenshots, error messages, or proof of duplicate charges</li>
@@ -301,9 +309,9 @@ export default function CancellationRefundPage() {
                     <h2 className="text-2xl font-bold text-white">6. Payment Processing & Refund Timeline</h2>
                   </div>
 
-                  <h3 className="text-xl font-semibold text-white mb-4">Razorpay Integration:</h3>
+                  <h3 className="text-xl font-semibold text-white mb-4">Cashfree Integration:</h3>
                   <p className="text-gray-300 leading-relaxed mb-6">
-                    All payments and refunds are processed through Razorpay, India's leading payment gateway. This ensures secure transactions and reliable refund processing.
+                    All payments and refunds are processed through Cashfree, India's leading payment gateway. This ensures secure transactions and reliable refund processing.
                   </p>
 
                   <h3 className="text-xl font-semibold text-white mb-4">Refund Timeline:</h3>

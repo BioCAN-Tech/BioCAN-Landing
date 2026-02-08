@@ -89,7 +89,7 @@ export default function ShippingDeliveryPage() {
                         Premium Services:
                       </h3>
                       <ul className="list-disc list-inside text-gray-300 space-y-2 ml-4">
-                        <li><strong>Credit Purchase:</strong> Credits activate within seconds of successful Razorpay payment</li>
+                        <li><strong>Credit Purchase:</strong> Credits activate within seconds of successful Cashfree payment</li>
                         <li><strong>Premium Features:</strong> Full access to premium features with credits</li>
                         <li><strong>Priority Support:</strong> Enhanced support features activate instantly</li>
                       </ul>

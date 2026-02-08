@@ -14,6 +14,7 @@ export default function Footer() {
     {
       title: 'Legal',
       links: [
+        { label: 'Pricing', href: 'https://app.biocan.ai/pricing', external: true },
         { label: 'About Us', href: '/about' },
         { label: 'Privacy Policy', href: '/privacy-policy' },
         { label: 'Terms & Conditions', href: '/terms' },
@@ -45,13 +46,25 @@ export default function Footer() {
             <div className="border-t border-white/5 pt-4">
               <div className="flex flex-wrap items-center justify-center gap-4">
                 {footerSections[0].links.map((link, index) => (
-                  <Link
-                    key={link.label}
-                    href={link.href}
-                    className="text-gray-500 hover:text-gray-400 transition-colors text-xs"
-                  >
-                    {link.label}
-                  </Link>
+                  link.external ? (
+                    <a
+                      key={link.label}
+                      href={link.href}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-gray-500 hover:text-gray-400 transition-colors text-xs"
+                    >
+                      {link.label}
+                    </a>
+                  ) : (
+                    <Link
+                      key={link.label}
+                      href={link.href}
+                      className="text-gray-500 hover:text-gray-400 transition-colors text-xs"
+                    >
+                      {link.label}
+                    </Link>
+                  )
                 ))}
               </div>
             </div>

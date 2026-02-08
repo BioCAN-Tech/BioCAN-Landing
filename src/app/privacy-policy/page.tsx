@@ -63,7 +63,7 @@ export default function PrivacyPolicyPage() {
                         <li><strong>Account Information:</strong> Name, email address, profile picture (via Google OAuth)</li>
                         <li><strong>Professional Details:</strong> Education, work experience, skills, career goals</li>
                         <li><strong>Contact Information:</strong> Phone number, location (optional)</li>
-                        <li><strong>Payment Information:</strong> Transaction IDs, payment status, and subscription details (payment card details are processed directly by Razorpay's PCI-DSS compliant servers - we never store or access card numbers, CVV, or expiry dates)</li>
+                        <li><strong>Payment Information:</strong> Transaction IDs, payment status, and subscription details (payment card details are processed directly by Cashfree's PCI-DSS compliant servers - we never store or access card numbers, CVV, or expiry dates)</li>
                       </ul>
                     </div>
 
@@ -110,7 +110,7 @@ export default function PrivacyPolicyPage() {
                     <h3 className="text-xl font-semibold text-white mb-3">2.5 Third-Party Integration Data</h3>
                     <ul className="list-disc list-inside text-gray-300 space-y-2 text-sm ml-4">
                       <li><strong>Gmail Data:</strong> Email content related to job applications (only with explicit OAuth consent)</li>
-                      <li><strong>Payment Gateway Data:</strong> Transaction IDs, payment status, subscription details (payment card information is processed directly by Razorpay - we never store or access sensitive card data)</li>
+                      <li><strong>Payment Gateway Data:</strong> Transaction IDs, payment status, subscription details (payment card information is processed directly by Cashfree - we never store or access sensitive card data)</li>
                       <li><strong>OAuth Tokens:</strong> Encrypted tokens for Gmail access (stored securely)</li>
                     </ul>
                     <div className="bg-blue-900/20 border border-blue-500/30 rounded-lg p-3 mt-3">
@@ -227,7 +227,7 @@ export default function PrivacyPolicyPage() {
                       <h3 className="text-xl font-semibold text-white mb-3">Service Providers:</h3>
                       <ul className="list-disc list-inside text-gray-300 space-y-2 ml-4">
                         <li><strong>Authentication:</strong> Google OAuth for secure login (complies with Google OAuth 2.0 policies)</li>
-                        <li><strong>Payment Processing:</strong> Razorpay for secure payment processing (PCI-DSS compliant)</li>
+                        <li><strong>Payment Processing:</strong> Cashfree for secure payment processing (PCI-DSS compliant)</li>
                         <li><strong>Cloud Infrastructure:</strong> Secure hosting and data storage</li>
                         <li><strong>Analytics:</strong> Usage analytics for platform improvement</li>
                         <li><strong>Email Services:</strong> Gmail API for job application tracking (with explicit OAuth consent, complies with Google API Services User Data Policy)</li>
@@ -243,13 +243,13 @@ export default function PrivacyPolicyPage() {
                       <div className="bg-green-900/20 border border-green-500/30 rounded-lg p-3 mt-3">
                         <p className="text-gray-300 text-sm font-semibold mb-2">Payment Processing & PCI-DSS Compliance:</p>
                         <p className="text-gray-300 text-xs mb-2">
-                          BioCAN uses Razorpay, a PCI-DSS Level 1 compliant payment gateway, for all payment processing. We do not store, process, or transmit credit card or debit card information on our servers.
+                          BioCAN uses Cashfree, a PCI-DSS Level 1 compliant payment gateway, for all payment processing. We do not store, process, or transmit credit card or debit card information on our servers.
                         </p>
                         <ul className="list-disc list-inside text-gray-300 text-xs space-y-1 ml-4">
-                          <li>Payment information is processed directly by Razorpay's secure servers</li>
+                          <li>Payment information is processed directly by Cashfree's secure servers</li>
                           <li>We only receive transaction IDs, payment status, and subscription details</li>
                           <li>All payment data is encrypted in transit using industry-standard SSL/TLS protocols</li>
-                          <li>Razorpay is certified as PCI-DSS Level 1 compliant, the highest level of security certification</li>
+                          <li>Cashfree is certified as PCI-DSS Level 1 compliant, the highest level of security certification</li>
                           <li>We comply with all applicable payment card industry security standards</li>
                         </ul>
                       </div>
@@ -322,18 +322,18 @@ export default function PrivacyPolicyPage() {
                   <div className="bg-yellow-900/20 border border-yellow-500/30 rounded-lg p-4">
                     <h3 className="text-xl font-semibold text-white mb-3">Payment Security & PCI-DSS Compliance:</h3>
                     <p className="text-gray-300 text-sm mb-3">
-                      BioCAN is committed to protecting your payment information. We use Razorpay, a PCI-DSS Level 1 certified payment gateway, to process all payments securely.
+                      BioCAN is committed to protecting your payment information. We use Cashfree, a PCI-DSS Level 1 certified payment gateway, to process all payments securely.
                     </p>
                     <ul className="list-disc list-inside text-gray-300 space-y-2 text-sm ml-4">
                       <li><strong>No Card Data Storage:</strong> We never store, process, or have access to your credit card numbers, CVV codes, or expiry dates</li>
-                      <li><strong>PCI-DSS Compliance:</strong> All payment processing is handled by Razorpay, which is certified as PCI-DSS Level 1 compliant (the highest level of security certification)</li>
+                      <li><strong>PCI-DSS Compliance:</strong> All payment processing is handled by Cashfree, which is certified as PCI-DSS Level 1 compliant (the highest level of security certification)</li>
                       <li><strong>Encrypted Transmission:</strong> All payment data is encrypted in transit using industry-standard SSL/TLS protocols</li>
-                      <li><strong>Secure Processing:</strong> Payment information is processed directly on Razorpay's secure servers, never on our systems</li>
+                      <li><strong>Secure Processing:</strong> Payment information is processed directly on Cashfree's secure servers, never on our systems</li>
                       <li><strong>Transaction Data:</strong> We only receive and store transaction IDs, payment status, and subscription details for account management purposes</li>
-                      <li><strong>Regular Audits:</strong> Razorpay undergoes regular security audits and maintains compliance with all payment card industry standards</li>
+                      <li><strong>Regular Audits:</strong> Cashfree undergoes regular security audits and maintains compliance with all payment card industry standards</li>
                     </ul>
                     <p className="text-gray-300 text-xs mt-3 italic">
-                      For more information about Razorpay's security practices, please visit <a href="https://razorpay.com/security" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300">razorpay.com/security</a>
+                      For more information about Cashfree's security practices, please visit <a href="https://www.cashfree.com/security/" target="_blank" rel="noopener noreferrer" className="text-purple-400 hover:text-purple-300">cashfree.com/security</a>
                     </p>
                   </div>
                 </div>

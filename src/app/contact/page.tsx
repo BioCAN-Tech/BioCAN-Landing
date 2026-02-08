@@ -222,7 +222,7 @@ export default function ContactPage() {
                     <li>You can sign up and explore features for free</li>
                     <li>To use premium features, you need to purchase credits</li>
                     <li>Credits are used for AI-powered features like Resume Builder, Job Tracker, and Automated Applications</li>
-                    <li>All payments are processed securely through Razorpay</li>
+                    <li>All payments are processed securely through Cashfree</li>
                   </ul>
                   <p className="mt-3 text-sm">No hidden charges. You only pay for what you use.</p>
                 </>

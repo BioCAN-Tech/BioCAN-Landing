@@ -23,7 +23,9 @@ export default function Navigation({ className }: NavigationProps) {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const navItems: any[] = []
+  const navItems = [
+    { label: 'Pricing', href: 'https://app.biocan.ai/pricing' }
+  ]
 
   const handleNavClick = (href: string) => {
     scrollToSection(href)
@@ -49,34 +51,37 @@ export default function Navigation({ className }: NavigationProps) {
             />
           </Link>
 
-          {/* Desktop Navigation */}
+          {/* Desktop Navigation & CTA Buttons */}
           <div className="hidden md:flex items-center space-x-8">
+            {/* Navigation Links */}
             {navItems.map((item) => (
-              <button
+              <a
                 key={item.href}
-                onClick={() => handleNavClick(item.href)}
+                href={item.href}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="text-gray-300 hover:text-white transition-colors duration-200 font-medium"
               >
                 {item.label}
-              </button>
+              </a>
             ))}
-          </div>
-
-          {/* CTA Button */}
-          <div className="hidden md:flex items-center space-x-4">
-            <Button
-              variant="ghost"
-              onClick={() => window.location.href = 'https://app.biocan.ai'}
-            >
-              Sign In
-            </Button>
-            <Button
-              variant="primary"
-              onClick={() => window.location.href = 'https://app.biocan.ai'}
-            >
-              Get Started
-              <ChevronRight className="w-4 h-4 ml-2" />
-            </Button>
+            
+            {/* CTA Buttons */}
+            <div className="flex items-center space-x-4">
+              <Button
+                variant="ghost"
+                onClick={() => window.location.href = 'https://app.biocan.ai'}
+              >
+                Sign In
+              </Button>
+              <Button
+                variant="primary"
+                onClick={() => window.location.href = 'https://app.biocan.ai'}
+              >
+                Get Started
+                <ChevronRight className="w-4 h-4 ml-2" />
+              </Button>
+            </div>
           </div>
 
           {/* Mobile Menu Button */}
@@ -91,34 +96,40 @@ export default function Navigation({ className }: NavigationProps) {
         {/* Mobile Navigation */}
         {isOpen && (
           <div className="md:hidden mt-6 glass-card rounded-2xl p-6 animate-slide-down">
-            <div className="space-y-4">
+            <div className="space-y-3">
+              {/* Pricing Link as Button Style */}
               {navItems.map((item) => (
-                <button
+                <a
                   key={item.href}
-                  onClick={() => handleNavClick(item.href)}
-                  className="block w-full text-left text-gray-300 hover:text-white py-2 transition-colors duration-200"
+                  href={item.href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block w-full text-center py-3 px-4 rounded-lg bg-white/5 border border-white/10 text-gray-300 hover:text-white hover:bg-white/10 transition-all duration-200 font-medium"
                 >
                   {item.label}
-                </button>
-                              ))}
-                <div className="pt-4 border-t border-white/10 space-y-3">
-                  <Button
-                    variant="ghost"
-                    className="w-full"
-                    onClick={() => window.location.href = 'https://app.biocan.ai'}
-                  >
-                    Sign In
-                  </Button>
-                  <Button
-                    variant="primary"
-                    className="w-full"
-                    onClick={() => window.location.href = 'https://app.biocan.ai'}
-                  >
-                    Get Started
-                    <ChevronRight className="w-4 h-4 ml-2" />
-                  </Button>
-                </div>
-              </div>
+                </a>
+              ))}
+              
+              {/* Divider */}
+              <div className="border-t border-white/10 my-4"></div>
+              
+              {/* Auth Buttons */}
+              <Button
+                variant="ghost"
+                className="w-full"
+                onClick={() => window.location.href = 'https://app.biocan.ai'}
+              >
+                Sign In
+              </Button>
+              <Button
+                variant="primary"
+                className="w-full"
+                onClick={() => window.location.href = 'https://app.biocan.ai'}
+              >
+                Get Started
+                <ChevronRight className="w-4 h-4 ml-2" />
+              </Button>
+            </div>
           </div>
         )}
       </div>
